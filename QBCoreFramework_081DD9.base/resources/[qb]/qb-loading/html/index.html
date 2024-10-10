@@ -13,29 +13,30 @@
     </head>
     <!-- This is where you want to replace with your audio -->
 
-    <audio autoplay loop id="audio" src="/assets/audio/noncopyright.mp3"></audio>
+    <!-- <audio autoplay loop id="audio" src="/assets/audio/noncopyright.mp3"></audio> -->
 
     <body>
         <div id="loading-main" style="min-height: auto;">
 
             <!-- Uncomment q-parallax and comment out q-carousel if you want to use a video background instead -->
 
-            <q-carousel animated v-model="firstslide" :autoplay="secondap" ref="carousel" infinite>
+            <!-- <q-carousel animated v-model="firstslide" :autoplay="secondap" ref="carousel" infinite>
                 <q-carousel-slide :name="1" img-src="/assets/images/1.png"></q-carousel-slide>
                 <q-carousel-slide :name="2" img-src="/assets/images/2.png"></q-carousel-slide>
                 <q-carousel-slide :name="3" img-src="/assets/images/3.png"></q-carousel-slide>
                 <q-carousel-slide :name="4" img-src="/assets/images/4.png"></q-carousel-slide>
-            </q-carousel>
+            </q-carousel> -->
 
             <!-- This is where you want to replace with your video -->
 
-
-            <!-- <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;">
-                <video id="video" style="width: 100%; height: 100%; object-fit: cover;" autoplay loop muted>
-                    <source type="video/mp4" src="/assets/video/freestockvideo.mp4">
-                </video>
-            </div> -->
-
+           
+            <q-parallax :height="1080">
+                <template v-slot:media>
+                    <video id="video" width="1920" height="1080" autoplay loop>
+                    <source type="video/mp4" src="/assets/video/secteur_51_intro.mp4"></video>
+                </template>
+            </q-parallax>
+    
 
             <div class="absolute-top q-pa-xl">
                 <q-card flat style="width: auto; background: transparent;">
@@ -183,7 +184,7 @@
 
                         <!-- This is where you want to replace with your logo -->
 
-                        <img class="cursor-none brand-logo" src="/assets/branding/qbcore.svg"></img>
+                        <!-- <img class="cursor-none brand-logo" src="/assets/branding/qbcore.svg"></img> -->
                         <q-space></q-space>
                         <q-btn :ripple="false" flat size="xl" icon="downloading" color="white" @click="download = true"></q-btn>
                         <div class="loadingbar">
