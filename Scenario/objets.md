@@ -1,0 +1,14 @@
+# Objets Recherchés Communément
+
+**Dossier Crypté :** Contient des informations sensibles sur le Projet Chronos et les tests de zombification. Initialement caché dans le coffre-fort personnel de Raven.
+
+**Échantillons de Sérum Omega :** Recherchés par plusieurs factions, ces échantillons sont dissimulés dans divers lieux autour de la ville. La localisation des échantillons pourrait amener les personnages à s’allier temporairement ou à entrer en conflit.
+
+
+**Clé de la Salle Noire :** Contient les preuves de zombification des cobayes humains. Elle est retrouvée sur le cadavre du capitaine Rine. (pas sûr) Cette salle est hautement sécurisée et d’autres joueurs pourraient obtenir un accès indirect.
+La salle pourrait contenir cadavre, laboratoire, zombie, etc...
+
+
+**Injecteur Neutre :** Permet de neutraliser les effets du sérum. L'agent de sécurité pourrait l’avoir pour des situations d'urgence, mais d'autres factions le cherchent désespérément.
+
+**Journaux d'Expérimentation :** Enregistrés par le scientifique paranoïaque, ces journaux contiennent des détails sur les expériences secrètes de Nova. Ils sont cachés dans un lieu reculé et gardé par des agents de sécurité.
