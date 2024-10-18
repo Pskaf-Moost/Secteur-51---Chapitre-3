@@ -14,3 +14,11 @@ La salle pourrait contenir cadavre, laboratoire, zombie, etc...
 **Journaux d'Expérimentation :** Enregistrés par le scientifique paranoïaque, ces journaux contiennent des détails sur les expériences secrètes de Nova. Ils sont cachés dans un lieu reculé et gardé par des agents de sécurité.
 
 **Clés USB :** Détenues par différentes personnes de la société, anciens amis de Rine, elles permettent ENSEMBLE de rejoindre un lieu secret.
+
+# Idées
+
+**Pièces de puzzle :** Cachées ou détenues, ensemble elles recontituent la photo d'un lieu important.
+
+**Lettre contenant un nom inconnu :** Une lettre contenant le VRAI nom d'une personne (identité secrète du coup) qui pourrait apporter de l'aide sur une quête.
+
+**Vieux téléphone :** Celui-ci ne contient qu'un seul numéro appartant à ???.
