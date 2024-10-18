@@ -9,19 +9,28 @@ Retournement possible : Raven pourrait tenter de négocier avec certains disside
 
 ## Capitaine Moustafa Rine (Policier disparu)
 
-Objectif : Avant sa disparition, il a tenté de réunir des preuves pour exposer les crimes de Nova. Sa note vocale sert de point de départ pour l'enquête.
-Motivations cachées : Rine a des informations compromettantes sur Raven, obtenues lors d’une ancienne enquête.
-Objets : Une clé de la salle noire que l’un des joueurs découvrira sur son cadavre. Cette salle contient des preuves cruciales sur le projet.
-Retournement possible : Des joueurs pourraient trouver d'autres indices sur le passé de Rine, révélant qu'il avait des liens secrets avec un groupe rival.
-Le Scientifique Paranoïaque (Ancien employé de Nova)
+**Objectif :** Avant sa disparition, il a tenté de réunir des preuves pour exposer les crimes de Nova. Sa note vocale sert de point de départ pour l'enquête.
 
-Objectif : Il veut détruire les recherches de Nova et révéler les dangers du Sérum Omega, craignant une catastrophe.
+**Motivations cachées :** Rine a des informations compromettantes sur Raven, obtenues lors d’une ancienne enquête. Personnage a mon avis, qui ne servira a rien mais il sert de point d'accroche
+
+**Objets :** Une clé de la salle noire que l’un des joueurs découvrira sur son cadavre. Cette salle contient des preuves cruciales sur le projet. **PAS SUR DU TOUT DE CET OBJET**
+
+
+## Le Scientifique Paranoïaque (Ancien employé de Nova)
+
+**Objectif :** Il veut détruire les recherches de Nova et révéler les dangers du Sérum Omega, craignant une catastrophe.
 Motivations cachées : Il a perdu un être cher lors d'un test avec le sérum, et il craint que Raven ne fasse pareil à d’autres.
-Objets : Un échantillon alternatif du Sérum Omega qu’il cache dans un laboratoire secret.
-Retournement possible : Il pourrait trahir les dissidents si Raven lui offre la sécurité.
-L’Agent de Sécurité Corrompu (Mercenaire à la solde de Raven)
 
-Objectif : Protéger les installations de Nova et éliminer toute menace envers le projet.
-Motivations cachées : Il est motivé par l’argent et garde des secrets compromettants sur Nova en échange de gros paiements.
-Objets : Un dossier d’autorisation qui permet l’accès aux laboratoires de Nova.
-Retournement possible : Il pourrait changer de camp si les dissidents lui proposent une meilleure offre.
+**Objets :** Un échantillon alternatif du Sérum Omega qu’il cache dans un laboratoire secret.
+
+**Retournement possible :** Il pourrait trahir les dissidents si Raven lui offre la sécurité.
+
+## L’Agent de Sécurité Corrompu (Mercenaire à la solde de Raven)
+
+**Objectif :** Protéger les installations de Nova et éliminer toute menace envers le projet.
+
+**Motivations cachées :** Il est motivé par l’argent et garde des secrets compromettants sur Nova en échange de gros paiements.
+
+**Objets :** Une carte d'accès qui permet l’accès aux laboratoires de Nova.
+
+**Retournement possible :** Il pourrait changer de camp si les dissidents lui proposent une meilleure offre.
