@@ -34,3 +34,9 @@ Motivations cachées : Il a perdu un être cher lors d'un test avec le sérum, e
 **Objets :** Une carte d'accès qui permet l’accès aux laboratoires de Nova.
 
 **Retournement possible :** Il pourrait changer de camp si les dissidents lui proposent une meilleure offre.
+
+# Idées personnages
+
+**Organisateur d'évènements illégaux :** Perso qui organise des évènements illégaux (courses, chasses, ...) permettant d'accéder à des objets ou autre.
+
+**Famille Riche** : Famille riche de Los Santos (3 ou 4 personnes) qui peuvent recruter des gens pour des missions ou pour les aider.
