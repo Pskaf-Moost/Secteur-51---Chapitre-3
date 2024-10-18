@@ -12,3 +12,5 @@ La salle pourrait contenir cadavre, laboratoire, zombie, etc...
 **Injecteur Neutre :** Permet de neutraliser les effets du sérum. L'agent de sécurité pourrait l’avoir pour des situations d'urgence, mais d'autres factions le cherchent désespérément.
 
 **Journaux d'Expérimentation :** Enregistrés par le scientifique paranoïaque, ces journaux contiennent des détails sur les expériences secrètes de Nova. Ils sont cachés dans un lieu reculé et gardé par des agents de sécurité.
+
+**Clés USB :** Détenues par différentes personnes de la société, anciens amis de Rine, elles permettent ENSEMBLE de rejoindre un lieu secret.
