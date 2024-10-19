@@ -23,6 +23,6 @@ La salle pourrait contenir cadavre, laboratoire, zombie, etc...
 
 **Vieux téléphone :** Celui-ci ne contient qu'un seul numéro appartant à ???.
 
-**Carte au trésor :"" Feuille contenant le dessin approximatif d'un lieu où un objet ou une réponse peut être trouvé
+**Carte au trésor :** Feuille contenant le dessin approximatif d'un lieu où un objet ou une réponse peut être trouvé
 
 **Enigme :** Feuille contenant un énigme permettant d'aller à un lieu précis ou de trouver l'identité d'une personne
