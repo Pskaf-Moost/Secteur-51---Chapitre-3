@@ -163,7 +163,7 @@ exports('removeNoLockVehicles', removeNoLockVehicles)
 -----------------------
 ---- Client Events ----
 -----------------------
-RegisterKeyMapping('togglelocks', Lang:t('info.tlock'), 'keyboard', 'L')
+RegisterKeyMapping('togglelocks', Lang:t('info.tlock'), 'keyboard', 'U')
 RegisterCommand('togglelocks', function()
     local ped = PlayerPedId()
     if IsPedInAnyVehicle(ped, false) then
