@@ -22,3 +22,7 @@ La salle pourrait contenir cadavre, laboratoire, zombie, etc...
 **Lettre contenant un nom inconnu :** Une lettre contenant le VRAI nom d'une personne (identité secrète du coup) qui pourrait apporter de l'aide sur une quête.
 
 **Vieux téléphone :** Celui-ci ne contient qu'un seul numéro appartant à ???.
+
+**Carte au trésor :"" Feuille contenant le dessin approximatif d'un lieu où un objet ou une réponse peut être trouvé
+
+**Enigme :** Feuille contenant un énigme permettant d'aller à un lieu précis ou de trouver l'identité d'une personne
