@@ -15,9 +15,46 @@ function interp(s, tab)
 	return (s:gsub('($%b{})', function(w) return tab[w:sub(3, -2)] or w end))
 end
 
+AddEventHandler('onResourceStart', function(resourceName)
+	if (GetCurrentResourceName() ~= resourceName) then
+		return
+	end
+	for _, playerId in ipairs(GetPlayers()) do
+		Citizen.Wait(1000)
+		getNearPlayers(playerId)
+		break
+	end
+end)
+
+
 RegisterServerEvent('okokChat:onPlayerSpawn')
 AddEventHandler('okokChat:onPlayerSpawn', function()
 	local _source = source
+
+	if #onlinePlayers >= 1 then
+		local addPlayer = true
+		for k,v in ipairs(onlinePlayers) do
+			if v == _source then
+				addPlayer = false
+			end
+		end
+
+		if addPlayer then
+			onlinePlayers[#onlinePlayers + 1] = _source
+		end
+	else
+		onlinePlayers[#onlinePlayers + 1] = _source
+	end
+end)
+
+AddEventHandler('playerDropped', function(reason)
+    local _source = source
+	for i = 1, #onlinePlayers do
+        if onlinePlayers[i] == source then
+            table.remove(onlinePlayers, i)
+            break
+        end
+    end
 end)
 
 RegisterServerEvent("okokChat:SetClosePlayers")
@@ -77,7 +114,7 @@ if Config.EnableMeCommand then
 		local time = os.date(Config.DateFormat)
 		local playerName = Config.ShowIDOnMessageForEveryone and xPlayer.PlayerData.charinfo.firstname.." "..xPlayer.PlayerData.charinfo.lastname.." ["..source.."]" or xPlayer.PlayerData.charinfo.firstname.." "..xPlayer.PlayerData.charinfo.lastname
 		local playerNameAdmin = playerName.." ["..source.."]"
-		local length = string.len(Config.OOCCommand)
+		local length = string.len(Config.MeCommand)
 		local message = rawCommand:sub(length + 1)
 
 		if mutedList[source] ~= nil then
@@ -89,6 +126,8 @@ if Config.EnableMeCommand then
 		end
 
 		if message:gsub("%s+", "") == "" then return end
+
+		if Config.Enable3DMe then TriggerClientEvent('okokChat:3dme', -1, "" .. message .. "", source) end
 		
 		if chatsHidden[source] == nil then
 			showToClosePlayers(xPlayer, function(players)
@@ -131,7 +170,7 @@ if Config.EnableDoCommand then
 		local time = os.date(Config.DateFormat)
 		local playerName = Config.ShowIDOnMessageForEveryone and xPlayer.PlayerData.charinfo.firstname.." "..xPlayer.PlayerData.charinfo.lastname.." ["..source.."]" or xPlayer.PlayerData.charinfo.firstname.." "..xPlayer.PlayerData.charinfo.lastname
 		local playerNameAdmin = playerName.." ["..source.."]"
-		local length = string.len(Config.OOCCommand)
+		local length = string.len(Config.DoCommand)
 		local message = rawCommand:sub(length + 1)
 
 		if mutedList[source] ~= nil then
@@ -143,6 +182,8 @@ if Config.EnableDoCommand then
 		end
 
 		if message:gsub("%s+", "") == "" then return end
+
+		if Config.Enable3DDo then TriggerClientEvent('okokChat:3ddo', -1, "" .. message .. "", source) end
 		
 		if chatsHidden[source] == nil then
 			showToClosePlayers(xPlayer, function(players)
@@ -1216,8 +1257,7 @@ function isAnonymousChatBlacklisted(xPlayer)
 end
 
 function showOnlyForAnonymous(anonymous)
-	for k,v in ipairs(GetPlayers()) do
-		v = tonumber(v)
+	for k,v in ipairs(onlinePlayers) do
 		local xPlayer = QBCore.Functions.GetPlayer(v)
 		if xPlayer ~= nil then
 			if not Config.ShowIDOnMessage and chatsHidden[xPlayer.PlayerData.source] == nil and not isAnonymousChatBlacklisted(xPlayer) then
@@ -1230,8 +1270,7 @@ function showOnlyForAnonymous(anonymous)
 end
 
 function showOnlyForAdminsAnonymous(admins)
-	for k,v in ipairs(GetPlayers()) do
-		v = tonumber(v)
+	for k,v in ipairs(onlinePlayers) do
 		local xPlayer = QBCore.Functions.GetPlayer(v)
 		if xPlayer ~= nil then
 			if isAdmin(xPlayer) and chatsHidden[xPlayer.PlayerData.source] == nil and not isAnonymousChatBlacklisted(xPlayer) then
@@ -1270,8 +1309,7 @@ function isAdmin(xPlayer)
 end
 
 function showOnlyForAdmins(admins)
-	for k,v in ipairs(GetPlayers()) do
-		v = tonumber(v)
+	for k,v in ipairs(onlinePlayers) do
 		local xPlayer = QBCore.Functions.GetPlayer(v)
 		if xPlayer ~= nil then
 			if isAdmin(xPlayer) and chatsHidden[xPlayer.PlayerData.source] == nil then
@@ -1282,8 +1320,7 @@ function showOnlyForAdmins(admins)
 end
 
 function showAll(players)
-	for k,v in ipairs(GetPlayers()) do
-		v = tonumber(v)
+	for k,v in ipairs(onlinePlayers) do
 		local xPlayer = QBCore.Functions.GetPlayer(v)
 		if xPlayer ~= nil then
 			if not Config.ShowIDOnMessage and chatsHidden[xPlayer.PlayerData.source] == nil then
@@ -1296,8 +1333,7 @@ function showAll(players)
 end
 
 function showToEveryoneNotHidden(players)
-	for k,v in ipairs(GetPlayers()) do
-		v = tonumber(v)
+	for k,v in ipairs(onlinePlayers) do
 		local xPlayer = QBCore.Functions.GetPlayer(v)
 		if xPlayer ~= nil then
 			if chatsHidden[xPlayer.PlayerData.source] == nil then
@@ -1308,8 +1344,7 @@ function showToEveryoneNotHidden(players)
 end
 
 function showMuteMessageToEveryone(id, players)
-	for k,v in ipairs(GetPlayers()) do
-		v = tonumber(v)
+	for k,v in ipairs(onlinePlayers) do
 		local xPlayer = QBCore.Functions.GetPlayer(v)
 		if xPlayer ~= nil then
 			if chatsHidden[xPlayer.PlayerData.source] == nil and id ~= v then
@@ -1320,8 +1355,7 @@ function showMuteMessageToEveryone(id, players)
 end
 
 function showForJob(job, players)
-	for k,v in ipairs(GetPlayers()) do
-		v = tonumber(v)
+	for k,v in ipairs(onlinePlayers) do
 		local xPlayer = QBCore.Functions.GetPlayer(v)
 		if xPlayer ~= nil then
 			if not Config.ShowIDOnMessage and xPlayer.PlayerData.job.name == job and chatsHidden[xPlayer.PlayerData.source] == nil then
@@ -1334,8 +1368,7 @@ function showForJob(job, players)
 end
 
 function showForJobAdmins(job, players)
-	for k,v in ipairs(GetPlayers()) do
-		v = tonumber(v)
+	for k,v in ipairs(onlinePlayers) do
 		local xPlayer = QBCore.Functions.GetPlayer(v)
 		if xPlayer ~= nil then
 			if xPlayer.PlayerData.job.name == job and chatsHidden[xPlayer.PlayerData.source] == nil and isAdmin(xPlayer) then
@@ -1348,8 +1381,7 @@ end
 function showToClosePlayers(xPlayer, admins)
     local ped = GetPlayerPed(xPlayer.PlayerData.source)
     local playerCoords = GetEntityCoords(ped, false)
-    for k,v in ipairs(GetPlayers()) do
-		v = tonumber(v)
+    for k,v in ipairs(onlinePlayers) do
         local xTarget = QBCore.Functions.GetPlayer(v)
 		if xTarget ~= nil then
 			if not Config.ShowIDOnMessage and chatsHidden[xTarget.source] == nil then
@@ -1372,8 +1404,7 @@ end
 function showToClosePlayersAdmins(xPlayer, admins)
 	local ped = GetPlayerPed(xPlayer.PlayerData.source)
 	local playerCoords = GetEntityCoords(ped, false)
-	for k,v in ipairs(GetPlayers()) do
-		v = tonumber(v)
+	for k,v in ipairs(onlinePlayers) do
 		local xTarget = QBCore.Functions.GetPlayer(v)
 		if xTarget ~= nil then
 			if chatsHidden[xTarget.source] == nil and isAdmin(xTarget) then
