@@ -210,6 +210,7 @@ RegisterNUICallback('UseItem', function(data, cb)
 end)
 
 RegisterNUICallback('SetInventoryData', function(data, cb)
+    TriggerEvent('cortex_backitems:RefreshAttachedItem', data)
     TriggerServerEvent('qb-inventory:server:SetInventoryData', data.fromInventory, data.toInventory, data.fromSlot, data.toSlot, data.fromAmount, data.toAmount)
     cb('ok')
 end)

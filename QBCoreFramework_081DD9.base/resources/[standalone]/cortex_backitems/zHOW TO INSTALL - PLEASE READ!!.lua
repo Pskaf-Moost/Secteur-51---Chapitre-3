@@ -1,0 +1,11 @@
+-- ## You need to go to qb-inventory or lj-inventory client/main.lua and find or search this:
+RegisterNUICallback('SetInventoryData', function(data, cb) -- ## line 898 for qb-inventory and line 940 for lj-inventory if you haven't changed anything from the original code.
+-- ## Add put this:
+TriggerEvent('cortex_backitems:RefreshAttachedItem', data)
+
+-- ## And it should be like this:
+RegisterNUICallback('SetInventoryData', function(data, cb)
+    TriggerEvent('cortex_backitems:RefreshAttachedItem', data)
+    TriggerServerEvent('inventory:server:SetInventoryData', data.fromInventory, data.toInventory, data.fromSlot, data.toSlot, data.fromAmount, data.toAmount)
+    cb('ok')
+end)
