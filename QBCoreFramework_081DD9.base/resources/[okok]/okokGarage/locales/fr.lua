@@ -93,7 +93,7 @@ Locales['fr'] = {
 	},
 	['vehicle_is_impounded'] = {
 		title = 'Garage',
-		text = 'This vehicle is currently impounded',
+		text = 'Ce véhicule est en fourrière',
 		time = 5000,
 		type = 'info'
 	},

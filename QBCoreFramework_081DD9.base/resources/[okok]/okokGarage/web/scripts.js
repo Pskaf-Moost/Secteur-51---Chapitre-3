@@ -352,13 +352,13 @@ function openViewMenu(selectedPlate){
 
 	if(allowRepair){
 		$('#takeout-repair-buttons').html(`
-			<button type="button" id="takeout-button-view" class="btn btn-blue btn-veh_actions w-50 me-2">TAKE OUT</button>
+			<button type="button" id="takeout-button-view" class="btn btn-blue btn-veh_actions w-50 me-2">Récupérer</button>
 			<button type="button" id="takeout-button-repair" class="btn btn-odark3 btn-veh_actions w-50 ms-2" data-bs-toggle="modal" data-bs-target="#repairModal">REPAIR</button>
 		`);
 		$('#repair_price').html(repairPrice);
 	} else {
 		$('#takeout-repair-buttons').html(`
-			<button type="button" id="takeout-button-view" class="btn btn-blue btn-veh_actions w-100">TAKE OUT</button>
+			<button type="button" id="takeout-button-view" class="btn btn-blue btn-veh_actions w-100">Récupérer</button>
 		`);
 	}
 
@@ -556,18 +556,18 @@ function set_extra(id, extra) {
 function showSharingWith() {
 	$('#page_info').html(`
 		<div class="d-flex" id="shareButtonsID">
-			<button type="button" class="btn btn-blue share-sel" id="shared">My Shares</button>
-			<button type="button" class="btn btn-odark2 ms-2 share-sel" id="shared2">Shared</button>
+			<button type="button" class="btn btn-blue share-sel" id="shared">Mes partages</button>
+			<button type="button" class="btn btn-odark2 ms-2 share-sel" id="shared2">Partagés</button>
 		</div>
 		
-		<span id="shareModalID"class="badge s-badge" data-bs-toggle="modal" data-bs-target="#shareModal"><i class="fa-solid fa-plus"></i> Share</span></span>
+		<span id="shareModalID"class="badge s-badge" data-bs-toggle="modal" data-bs-target="#shareModal"><i class="fa-solid fa-plus"></i> Partager</span></span>
 
 		<table id="mySharesTable">
 			<thead>
 				<tr>
 					<th class="text-center">Type</th>
-					<th class="text-center">Vehicle</th>
-					<th class="text-center">Player</th>
+					<th class="text-center">Véhicule</th>
+					<th class="text-center">Joueur</th>
 					<th class="text-center">Actions</th>
 				</tr>
 			</thead>
@@ -619,18 +619,18 @@ function showSharedWith() {
 	if (tbl) tbl.parentNode.removeChild(tbl);
 	$('#page_info').html(`
 		<div class="d-flex" id="shareButtonsID">
-			<button type="button" class="btn btn-odark2 share-sel" id="shared">My Shares</button>
-			<button type="button" class="btn btn-blue ms-2 share-sel" id="shared2">Shared</button>
+			<button type="button" class="btn btn-odark2 share-sel" id="shared">Mes partages</button>
+			<button type="button" class="btn btn-blue ms-2 share-sel" id="shared2">Partagés</button>
 		</div>
 		
-		<span id="shareModalID"class="badge s-badge" data-bs-toggle="modal" data-bs-target="#shareModal"><i class="fa-solid fa-plus"></i> Share</span></span>
+		<span id="shareModalID"class="badge s-badge" data-bs-toggle="modal" data-bs-target="#shareModal"><i class="fa-solid fa-plus"></i> Partager</span></span>
 
 		<table id="mySharesTable">
 			<thead>
 				<tr>
 					<th class="text-center">Type</th>
-					<th class="text-center">Vehicle</th>
-					<th class="text-center">Player</th>
+					<th class="text-center">Véhicule</th>
+					<th class="text-center">Joueur</th>
 					<th class="text-center">Actions</th>
 				</tr>
 			</thead>
@@ -654,7 +654,7 @@ function showSharedWith() {
 							<td class="text-center align-middle">${sharedWith[i].type}</td>
 							<td class="text-center align-middle">${vehicleName}</td>
 							<td class="text-center align-middle">${sharedWith[i].ownerName}</td>
-							<td class="text-center align-middle"><button type="button" id="viewVehicleOrGarage" data-vehiclemodel="${sharedWith[i].vehicleModel}" data-vehicleurl="${sharedWith[i].vehicleURL}" data-sharedtype="${sharedWith[i].type}" data-sharedowner="${sharedWith[i].owner}" data-sharedplate="${sharedWith[i].plate}" class="btn btn-blue btn-cancelshare"><i class="fa-solid fa-eye"></i> VIEW</button></td>
+							<td class="text-center align-middle"><button type="button" id="viewVehicleOrGarage" data-vehiclemodel="${sharedWith[i].vehicleModel}" data-vehicleurl="${sharedWith[i].vehicleURL}" data-sharedtype="${sharedWith[i].type}" data-sharedowner="${sharedWith[i].owner}" data-sharedplate="${sharedWith[i].plate}" class="btn btn-blue btn-cancelshare"><i class="fa-solid fa-eye"></i> Voir</button></td>
 						</tr>`
 
 				$('#mySharesTableData').html(row)
@@ -764,7 +764,7 @@ function openEmployees() {
 						<hr>
 						<span class="sidebar-title">Menu</span>
 						<div id="sidebar">
-							<p class="sidebar-item mt-2" id="overviewc_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Overview</span></p>
+							<p class="sidebar-item mt-2" id="overviewc_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Résumé</span></p>
 							<p class="sidebar-item selected" id="employees_page"><i class="fas fa-user-friends"></i> <span class="ms-1">Employees</span></p>
 							<p class="sidebar-item" id="saleshistory_page"><i class="fas fa-chart-bar"></i> <span class="ms-1">Sales History</span></p>
 						</div>
@@ -866,7 +866,7 @@ function openSalesHistory() {
 					<hr>
 					<span class="sidebar-title">Menu</span>
 					<div id="sidebar">
-						<p class="sidebar-item mt-2" id="overviewc_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Overview</span></p>
+						<p class="sidebar-item mt-2" id="overviewc_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Résumé</span></p>
 						<p class="sidebar-item" id="employees_page"><i class="fas fa-user-friends"></i> <span class="ms-1">Employees</span></p>
 						<p class="sidebar-item selected" id="saleshistory_page"><i class="fas fa-chart-bar"></i> <span class="ms-1">Sales History</span></p>
 					</div>
@@ -948,7 +948,7 @@ function openCompanyMenu() {
 					<hr>
 					<span class="sidebar-title">Menu</span>
 					<div id="sidebar">
-						<p class="sidebar-item mt-2 selected" id="overviewc_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Overview</span></p>
+						<p class="sidebar-item mt-2 selected" id="overviewc_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Résumé</span></p>
 						<p class="sidebar-item" id="employees_page"><i class="fas fa-user-friends"></i> <span class="ms-1">Employees</span></p>
 						<p class="sidebar-item" id="saleshistory_page"><i class="fas fa-chart-bar"></i> <span class="ms-1">Sales History</span></p>
 					</div>
@@ -957,7 +957,7 @@ function openCompanyMenu() {
 				</div>
 				<div class="col-md-10 tab-s">
 					<div class="d-flex justify-content-between align-items-center">
-						<span class="selected-page"><span id="page-title">Overview</span></span>
+						<span class="selected-page"><span id="page-title">Résumé</span></span>
 						<div>
 							<span class="username align-middle">
 									<span id="playerName">${player_name}</span> <span id="avatar"><img src="img/${icon}" class="avatar"></span>
@@ -1339,7 +1339,7 @@ function adminBusinessMenu() {
 
 		<div class="vehicles_window">
 			<div class="row">
-				<span class="card-o-title2 text-center"> No Businesses Available </span>
+				<span class="card-o-title2 text-center"> Pas de buisness disponible </span>
 			</div> 
 		</div>`)
 	}
@@ -1417,7 +1417,7 @@ function adminGaragesMenu() {
 		$('#page_garagesInfo').html(`
 			<div class="vehicles_window">
 				<div class="row">
-					<span class="card-o-title2 grey-text text-center"> No Garages Available </span>
+					<span class="card-o-title2 grey-text text-center"> Pas de garage disponible </span>
 				</div> 
 			</div>
 		`);
@@ -1581,7 +1581,7 @@ function openPlayerImpound() {
 					<span class="close-button" id="closeImpound2Menu"> <i class="fas fa-times"> </i></span>
 						<div class="row">
 							<div class="col-md-12 section" id="impound2_div">
-								<span class="selected-page sp-i2 text-center"> <span id="page-title"> Impounded Vehicles </span></span>
+								<span class="selected-page sp-i2 text-center"> <span id="page-title"> Véhicules en fourrière </span></span>
 								<hr class="mg050">
 								<div class="impound2_window mt-2" id="impounded_vehicles">
 								<div class="row" id="impounded_vehicles2">
@@ -1666,10 +1666,10 @@ function openPlayerImpound() {
 					<div class="row">
 						<div class="col-md-12 section" id="impound2_div">
 							<span class="selected-page sp-i2 text-center"> 
-								<span id="page-title"> Impounded Vehicles </span>
+								<span id="page-title"> Véhicules en fourrière </span>
 							</span>
 							<hr class="mg050">
-							<span class="card-o-title2 text-center grey-text"> No Vehicles Impounded </span>
+							<span class="card-o-title2 text-center grey-text"> Pas de véhicule en fourrière </span>
 						</div> 
 					</div> 
 				</div> 
@@ -1680,21 +1680,21 @@ function openPlayerImpound() {
 
 function openOverview() {
 	var sideBar = `
-		<p class="sidebar-item mt-2 selected" id="overview_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Overview</span></p>
-		<p class="sidebar-item" id="vehicles_page"><i class="fa-solid fa-warehouse"></i> <span class="ms-1">Vehicles</span></p>
-		<p class="sidebar-item" id="share_page"><i class="fa-solid fa-users"></i> <span class="ms-1">Share</span></p>
+		<p class="sidebar-item mt-2 selected" id="overview_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Résumé</span></p>
+		<p class="sidebar-item" id="vehicles_page"><i class="fa-solid fa-warehouse"></i> <span class="ms-1">Véhicules</span></p>
+		<p class="sidebar-item" id="share_page"><i class="fa-solid fa-users"></i> <span class="ms-1">Partager</span></p>
 	`;
 	if (noSharedTab) {
 		sideBar = `
-			<p class="sidebar-item mt-2 selected" id="overview_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Overview</span></p>
-			<p class="sidebar-item" id="vehicles_page"><i class="fa-solid fa-warehouse"></i> <span class="ms-1">Vehicles</span></p>
+			<p class="sidebar-item mt-2 selected" id="overview_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Résumé</span></p>
+			<p class="sidebar-item" id="vehicles_page"><i class="fa-solid fa-warehouse"></i> <span class="ms-1">Véhicules</span></p>
 		`;
 	}
 	$('#sidebar').html(sideBar);
 
 
 	$('#top_bar').html(`
-		<span class="selected-page">Overview</span>
+		<span class="selected-page">Résumé</span>
 		<div>
 			<span class="username align-middle">
 				<span id="playerName">${player_name}</span> <span id="avatar"><img src="img/${icon}" class="avatar"></span>
@@ -1708,29 +1708,29 @@ function openOverview() {
 			<div class="col col-md-6 d-flex justify-content-center pr05">
 				<div class="card card-o w-100">
 					<div class="card-header card-o-header text-center">
-						<span class="card-o-title"> Vehicle Information </span> 
+						<span class="card-o-title"> Information du Véhicule </span> 
 					</div> 
 					<div class="card-body card-o-body vehicle_information_card-body text-center">
-					<div class="h-100 d-flex justify-content-center align-items-center veh_info_noinfo"> No Information Available </div> 
+					<div class="h-100 d-flex justify-content-center align-items-center veh_info_noinfo"> Pas d'information disponible </div> 
 				</div> 
 			</div> 
 		</div> 
 		<div class="col col-md-6 d-flex justify-content-center pl05">
 		<div class="card card-o w-100">
 		<div class="card-header card-o-header text-center">
-		<span class="card-o-title"> Vehicle Not Selected </span> 
+		<span class="card-o-title"> Véhicule non choisi </span> 
 		</div> 
 		<div class="card-body card-o-body vehicle_selected_card-body text-center">
-		<span class="veh_info_notselected"> No Selection </span> 
+		<span class="veh_info_notselected"> Pas de véhicule affiché </span> 
 		<div class="card-body text-center d-flex justify-content-center align-items-center veh_selected_h"> <img src="img/${garageType}.png" class="veh_selected_img">
 		</div> 
 		<div class="d-flex mt-119">
-		<span class="veh_notselected_btn w-50 me-1"> View </span>
-		<span class="veh_notselected_btn w-50 ms-1"> Take Out </span> 
+		<span class="veh_notselected_btn w-50 me-1"> Voir </span>
+		<span class="veh_notselected_btn w-50 ms-1"> Récupérer </span> 
 		</div> 
 		<div class="d-flex mt-2">
-		<span class="veh_notselected_btn w-50 me-1"> Transfer Keys </span> 
-		<span class="veh_notselected_btn w-50 ms-1"> Transfer Vehicle </span> </div> 
+		<span class="veh_notselected_btn w-50 me-1"> Transferér les Clefs </span> 
+		<span class="veh_notselected_btn w-50 ms-1"> Transférer Véhicule </span> </div> 
 		</div> 
 		</div> 
 		</div>
@@ -1746,7 +1746,7 @@ function openOverview() {
 		} else if (vehicle[0].stored == 1) {
 			vehicle[0].stored = "Stored"
 		} else if (vehicle[0].stored == 2) {
-			vehicle[0].stored = "Impounded"
+			vehicle[0].stored = "Fourriere"
 		} else if (vehicle[0].stored == 3) {
 			vehicle[0].stored = "Stolen"
 		}
@@ -1762,8 +1762,8 @@ function openOverview() {
 		} else if (vehicle[0].stored == 'Stored') {
 			vehicle[0].stored = "Stored";
 			stored_div = `<div class="d-flex justify-content-center align-items-center mt-2 veh_info_info">Status:&nbsp;${vehicle[0].stored}${garageSaved}</div>`;
-		} else if (vehicle[0].stored == 'Impounded') {
-			vehicle[0].stored = "Impounded";
+		} else if (vehicle[0].stored == 'Fourriere') {
+			vehicle[0].stored = "Fourriere";
 			stored_div = `<div class="d-flex justify-content-center align-items-center mt-2 veh_info_info">Status:&nbsp;${vehicle[0].stored}</div>`;
 		} else if (vehicle[0].stored == 'Stolen') {
 			vehicle[0].stored = "Stolen";
@@ -1774,15 +1774,15 @@ function openOverview() {
 					<div class="col col-md-6 d-flex justify-content-center pr05">
 						<div class="card card-o w-100">
 							<div class="card-header card-o-header text-center">
-								<span class="card-o-title">Vehicle Information</span>
+								<span class="card-o-title">Information du Véhicule</span>
 							</div>
 							<div class="card-body card-o-body vehicle_information_card-body text-center">
-								<div class="d-flex justify-content-center align-items-center veh_info_info">Plate:&nbsp;${vehicle[0].plate}</div>
+								<div class="d-flex justify-content-center align-items-center veh_info_info">Plaque:&nbsp;${vehicle[0].plate}</div>
 								${stored_div}
-								<div class="d-flex justify-content-center align-items-center mt-2 veh_info_info">Fuel:&nbsp;${Math.round(vehicle[0].fLevel)}%</div>
+								<div class="d-flex justify-content-center align-items-center mt-2 veh_info_info">Essence:&nbsp;${Math.round(vehicle[0].fLevel)}%</div>
 								<div class="d-flex">
-									<div class="d-flex justify-content-center align-items-center mt-2 veh_info_info w-50 me-1">Body:&nbsp;${(Math.round(vehicle[0].bHealth) * 0.1).toFixed(1).replace(/\.0$/, '')}%</div>
-									<div class="d-flex justify-content-center align-items-center mt-2 veh_info_info w-50 ms-1">Engine:&nbsp;${(Math.round(vehicle[0].eHealth) * 0.1).toFixed(1).replace(/\.0$/, '')}%</div>
+									<div class="d-flex justify-content-center align-items-center mt-2 veh_info_info w-50 me-1">Carrosserie:&nbsp;${(Math.round(vehicle[0].bHealth) * 0.1).toFixed(1).replace(/\.0$/, '')}%</div>
+									<div class="d-flex justify-content-center align-items-center mt-2 veh_info_info w-50 ms-1">Moteur:&nbsp;${(Math.round(vehicle[0].eHealth) * 0.1).toFixed(1).replace(/\.0$/, '')}%</div>
 								</div>
 							</div>
 						</div>
@@ -1790,7 +1790,7 @@ function openOverview() {
 					<div class="col col-md-6 d-flex justify-content-center pl05">
 						<div class="card card-o w-100">
 							<div class="card-header card-o-header text-center">
-								<span class="card-o-title">Vehicle Selected</span>
+								<span class="card-o-title">Véhicule choisi</span>
 							</div>
 							<div class="card-body card-o-body vehicle_selected_card-body text-center">
 								<span class="veh_info_selected">${vehicle[0].vehiclename}</span>
@@ -1798,12 +1798,12 @@ function openOverview() {
 									<img src="${vehicle[0].vehicleURL}" class="veh_selected_img">
 								</div>
 								<div class="d-flex mt-119">
-									<button type="button" class="btn btn-blue veh_selected_btn w-50 me-1" id="view_vehicle" data-vehicle_plate="${vehicle[0].plate}" data-vehicle_id="${vehicle[0].vehicleModel}" data-vehicleurl="${vehicle[0].vehicleURL}">View</button>
-									<button type="button" class="btn btn-blue veh_selected_btn w-50 ms-1" id="take_out" data-vehicle_plate="${vehicle[0].plate}" data-vehicle_id="${vehicle[0].vehicleModel}" data-vehicle_name="${vehicle[0].vehiclename}" data-vehicle_type="${vehicle[0].type}" data-vehicleurl="${vehicle[0].vehicleURL}">Take Out</button>
+									<button type="button" class="btn btn-blue veh_selected_btn w-50 me-1" id="view_vehicle" data-vehicle_plate="${vehicle[0].plate}" data-vehicle_id="${vehicle[0].vehicleModel}" data-vehicleurl="${vehicle[0].vehicleURL}">Voir</button>
+									<button type="button" class="btn btn-blue veh_selected_btn w-50 ms-1" id="take_out" data-vehicle_plate="${vehicle[0].plate}" data-vehicle_id="${vehicle[0].vehicleModel}" data-vehicle_name="${vehicle[0].vehiclename}" data-vehicle_type="${vehicle[0].type}" data-vehicleurl="${vehicle[0].vehicleURL}">Récupérer</button>
 								</div>
 								<div class="d-flex mt-2">
 									<button type="button" id="transferKeys" class="btn btn-blue veh_selected_btn w-50 me-1" data-bs-toggle="modal" data-bs-target="#transferKeysModal">Transfer Keys</button>
-									<button type="button" id="transferVehicle" class="btn btn-blue veh_selected_btn w-50 ms-1" data-bs-toggle="modal" data-bs-target="#transferVehicleModal">Transfer Vehicle</button>
+									<button type="button" id="transferVehicle" class="btn btn-blue veh_selected_btn w-50 ms-1" data-bs-toggle="modal" data-bs-target="#transferVehicleModal">Transférer Véhicule</button>
 								</div>
 							</div>
 						</div>
@@ -1831,7 +1831,7 @@ function openSocietyGarage() {
 					<span class="close-button" id="closeImpound2Menu"> <i class="fas fa-times"> </i></span>
 						<div class="row">
 							<div class="col-md-12 section" id="impound2_div">
-								<span class="selected-page sp-i2 text-center"> <span id="page-title"> Society Vehicles </span></span>
+								<span class="selected-page sp-i2 text-center"> <span id="page-title"> Society Véhicules </span></span>
 								<hr class="mg050">
 								<div class="impound2_window mt-2" id="impounded_vehicles">
 								<div class="row" id="impounded_vehicles2">
@@ -1860,7 +1860,7 @@ function openSocietyGarage() {
 			} else if (vehicles[i].stored == 1) {
 				vehicles[i].stored = "Stored"
 			} else if (vehicles[i].stored == 2) {
-				vehicles[i].stored = "Impounded"
+				vehicles[i].stored = "Fourriere"
 			} else if (vehicles[i].stored == 3) {
 				vehicles[i].stored = "Stolen"
 			}
@@ -1881,7 +1881,7 @@ function openSocietyGarage() {
 								<div class="d-flex align-items-center text-center mb-2 vehicles_img_h"> 
 									<img src="${vehicles[i].vehicleURL}" class="w-100">
 								</div>
-								<button type = "button" class="btn btn-blue vehicles_btn mt-1 w-100" id="take_out2" data-vehicle_plate="${vehicles[i].plate}" data-vehicle_id="${vehicles[i].vehicleModel}" data-vehicle_name="${vehicles[i].vehiclename}" data-vehicle_type="${vehicles[i].type}">Take Out</button> 
+								<button type = "button" class="btn btn-blue vehicles_btn mt-1 w-100" id="take_out2" data-vehicle_plate="${vehicles[i].plate}" data-vehicle_id="${vehicles[i].vehicleModel}" data-vehicle_name="${vehicles[i].vehiclename}" data-vehicle_type="${vehicles[i].type}">Récupérer</button> 
 							</div> 
 						</div> 
 					</div> 
@@ -1910,10 +1910,10 @@ function openSocietyGarage() {
 					<div class="row">
 						<div class="col-md-12 section" id="impound2_div">
 							<span class="selected-page sp-i2 text-center"> 
-								<span id="page-title"> Society Vehicles </span>
+								<span id="page-title"> Society Véhicules </span>
 							</span>
 							<hr class="mg050">
-							<span class="card-o-title2 text-center"> No Vehicles Available </span>
+							<span class="card-o-title2 text-center"> Pas de Véhicule disponible </span>
 						</div> 
 					</div> 
 				</div> 
@@ -1939,23 +1939,23 @@ function showFavourites() {
 
 			<div class="card card-o d-flex flex-column">
 				<div class="card-header card-o-header text-center">
-					<span class="card-o-title">Favorite Vehicles</span>
+					<span class="card-o-title">Favorite Véhicules</span>
 				</div>
 						<div class="card-body card-o-body favorite_vehicles_card-body">
 							<div class="row h-100">
 							<div class="col col-md-4 d-flex justify-content-center pr05">
 							<div class="card fav_veh-card w-100">
 								<div class="card-header card-o-header fav_veh_borderbot text-center">
-									<span class="fav_veh_slot_title">Slot #1</span>
+									<span class="fav_veh_slot_title">Emplacement #1</span>
 								</div>
 								<div class="card-body text-center fav_veh_height">
 									<div class="available_slot">
-										<span>Available</span>
+										<span>Emplacement</span>
 										<br>
-										<span>Slot</span>
+										<span>Disponible</span>
 									</div>
 									<div class="d-flex mt-09">
-										<button type="button" class="btn btn-blue fav_veh_btn w-100" id="Choose">Choose</button>
+										<button type="button" class="btn btn-blue fav_veh_btn w-100" id="Choisir">Choisir</button>
 									</div>
 								</div>
 							</div>
@@ -1963,16 +1963,16 @@ function showFavourites() {
 						<div class="col col-md-4 d-flex justify-content-center pr05 pl05">
 							<div class="card fav_veh-card w-100">
 								<div class="card-header card-o-header fav_veh_borderbot text-center">
-									<span class="fav_veh_slot_title">Slot #2</span>
+									<span class="fav_veh_slot_title">Emplacement #2</span>
 								</div>
 								<div class="card-body text-center fav_veh_height">
 									<div class="available_slot">
-										<span>Available</span>
+										<span>Emplacement</span>
 										<br>
-										<span>Slot</span>
+										<span>Disponible</span>
 									</div>
 									<div class="d-flex mt-09">
-										<button type="button" class="btn btn-blue fav_veh_btn w-100" id="Choose">Choose</button>
+										<button type="button" class="btn btn-blue fav_veh_btn w-100" id="Choisir">Choisir</button>
 									</div>
 								</div>
 							</div>
@@ -1980,16 +1980,16 @@ function showFavourites() {
 						<div class="col col-md-4 d-flex justify-content-center pl05">
 							<div class="card fav_veh-card w-100">
 								<div class="card-header card-o-header fav_veh_borderbot text-center">
-									<span class="fav_veh_slot_title">Slot #3</span>
+									<span class="fav_veh_slot_title">Emplacement #3</span>
 								</div>
 								<div class="card-body text-center fav_veh_height">
 									<div class="available_slot">
-										<span>Available</span>
+										<span>Emplacement</span>
 										<br>
-										<span>Slot</span>
+										<span>Disponible</span>
 									</div>
 									<div class="d-flex mt-09">
-										<button type="button" class="btn btn-blue fav_veh_btn w-100" id="Choose">Choose</button>
+										<button type="button" class="btn btn-blue fav_veh_btn w-100" id="Choisir">Choisir</button>
 									</div>
 								</div>
 							</div>
@@ -2003,13 +2003,13 @@ function showFavourites() {
 
 		case 1:
 			var buttonStatus = '';
-			var vehicleText = 'Take Out';
+			var vehicleText = 'Récupérer';
 			if(favVehicles[favouriteAmount - 1].stored != 1){
 				buttonStatus = 'disabled';
 				if(favVehicles[favouriteAmount - 1].stored == 0){
 					vehicleText = 'Outside';
 				} else if(favVehicles[favouriteAmount - 1].stored == 2){
-					vehicleText = 'Impounded';
+					vehicleText = 'Fourriere';
 				} else if(favVehicles[favouriteAmount - 1].stored == 3){
 					vehicleText = 'Stolen';
 				}
@@ -2018,7 +2018,7 @@ function showFavourites() {
 
 				<div class="card card-o d-flex flex-column">
 					<div class="card-header card-o-header text-center">
-						<span class="card-o-title">Favorite Vehicles</span>
+						<span class="card-o-title">Favorite Véhicules</span>
 					</div>
 					<div class="card-body card-o-body favorite_vehicles_card-body">
 						<div class="row h-100">
@@ -2040,16 +2040,16 @@ function showFavourites() {
 							<div class="col col-md-4 d-flex justify-content-center pr05 pl05">
 								<div class="card fav_veh-card w-100">
 									<div class="card-header card-o-header fav_veh_borderbot text-center">
-										<span class="fav_veh_slot_title">Slot #2</span>
+										<span class="fav_veh_slot_title">Emplacement #2</span>
 									</div>
 									<div class="card-body text-center fav_veh_height">
 										<div class="available_slot">
-											<span>Available</span>
+											<span>Emplacement</span>
 											<br>
-											<span>Slot</span>
+											<span>Disponible</span>
 										</div>
 										<div class="d-flex mt-09">
-											<button type="button" class="btn btn-blue fav_veh_btn w-100" id="Choose">Choose</button>
+											<button type="button" class="btn btn-blue fav_veh_btn w-100" id="Choisir">Choisir</button>
 										</div>
 									</div>
 								</div>
@@ -2057,16 +2057,16 @@ function showFavourites() {
 							<div class="col col-md-4 d-flex justify-content-center pl05">
 								<div class="card fav_veh-card w-100">
 									<div class="card-header card-o-header fav_veh_borderbot text-center">
-										<span class="fav_veh_slot_title">Slot #3</span>
+										<span class="fav_veh_slot_title">Emplacement #3</span>
 									</div>
 									<div class="card-body text-center fav_veh_height">
 										<div class="available_slot">
-											<span>Available</span>
+											<span>Emplacement</span>
 											<br>
-											<span>Slot</span>
+											<span>Disponible</span>
 										</div>
 										<div class="d-flex mt-09">
-											<button type="button" class="btn btn-blue fav_veh_btn w-100" id="Choose">Choose</button>
+											<button type="button" class="btn btn-blue fav_veh_btn w-100" id="Choisir">Choisir</button>
 										</div>
 									</div>
 								</div>
@@ -2079,14 +2079,14 @@ function showFavourites() {
 		case 2:
 			var buttonStatus = '';
 			var buttonStatus2 = '';
-			var vehicleText = 'Take Out';
-			var vehicleText2 = 'Take Out';
+			var vehicleText = 'Récupérer';
+			var vehicleText2 = 'Récupérer';
 			if(favVehicles[favouriteAmount - 2].stored != 1){
 				buttonStatus = 'disabled';
 				if(favVehicles[favouriteAmount - 2].stored == 0){
 					vehicleText = 'Outside';
 				} else if(favVehicles[favouriteAmount - 2].stored == 2){
-					vehicleText = 'Impounded';
+					vehicleText = 'Fourriere';
 				} else if(favVehicles[favouriteAmount - 2].stored == 3){
 					vehicleText = 'Stolen';
 				}
@@ -2096,7 +2096,7 @@ function showFavourites() {
 				if(favVehicles[favouriteAmount - 1].stored == 0){
 					vehicleText2 = 'Outside';
 				} else if(favVehicles[favouriteAmount - 1].stored == 2){
-					vehicleText2 = 'Impounded';
+					vehicleText2 = 'Fourriere';
 				} else if(favVehicles[favouriteAmount - 1].stored == 3){
 					vehicleText2 = 'Stolen';
 				}
@@ -2105,7 +2105,7 @@ function showFavourites() {
 
 				<div class="card card-o d-flex flex-column">
 					<div class="card-header card-o-header text-center">
-						<span class="card-o-title">Favorite Vehicles</span>
+						<span class="card-o-title">Favorite Véhicules</span>
 					</div>
 					<div class="card-body card-o-body favorite_vehicles_card-body">
 						<div class="row h-100">
@@ -2142,16 +2142,16 @@ function showFavourites() {
 							<div class="col col-md-4 d-flex justify-content-center pl05">
 								<div class="card fav_veh-card w-100">
 									<div class="card-header card-o-header fav_veh_borderbot text-center">
-										<span class="fav_veh_slot_title">Slot #3</span>
+										<span class="fav_veh_slot_title">Emplacement #3</span>
 									</div>
 									<div class="card-body text-center fav_veh_height">
 										<div class="available_slot">
-											<span>Available</span>
+											<span>Emplacement</span>
 											<br>
-											<span>Slot</span>
+											<span>Disponible</span>
 										</div>
 										<div class="d-flex mt-09">
-											<button type="button" class="btn btn-blue fav_veh_btn w-100" id="Choose">Choose</button>
+											<button type="button" class="btn btn-blue fav_veh_btn w-100" id="Choisir">Choisir</button>
 										</div>
 									</div>
 								</div>
@@ -2165,16 +2165,16 @@ function showFavourites() {
 			var buttonStatus = '';
 			var buttonStatus2 = '';
 			var buttonStatus3 = '';
-			var vehicleText = 'Take Out';
-			var vehicleText2 = 'Take Out';
-			var vehicleText3 = 'Take Out';
+			var vehicleText = 'Récupérer';
+			var vehicleText2 = 'Récupérer';
+			var vehicleText3 = 'Récupérer';
 				
 			if(favVehicles[favouriteAmount - 3].stored != 1){
 				buttonStatus = 'disabled';
 				if(favVehicles[favouriteAmount - 3].stored == 0){
 					vehicleText = 'Outside';
 				} else if(favVehicles[favouriteAmount - 3].stored == 2){
-					vehicleText = 'Impounded';
+					vehicleText = 'Fourriere';
 				} else if(favVehicles[favouriteAmount - 3].stored == 3){
 					vehicleText = 'Stolen';
 				}
@@ -2184,7 +2184,7 @@ function showFavourites() {
 				if(favVehicles[favouriteAmount - 2].stored == 0){
 					vehicleText2 = 'Outside';
 				} else if(favVehicles[favouriteAmount - 2].stored == 2){
-					vehicleText2 = 'Impounded';
+					vehicleText2 = 'Fourriere';
 				} else if(favVehicles[favouriteAmount - 2].stored == 3){
 					vehicleText2 = 'Stolen';
 				}
@@ -2194,7 +2194,7 @@ function showFavourites() {
 				if(favVehicles[favouriteAmount - 1].stored == 0){
 					vehicleText3 = 'Outside';
 				} else if(favVehicles[favouriteAmount - 1].stored == 2){
-					vehicleText3 = 'Impounded';
+					vehicleText3 = 'Fourriere';
 				} else if(favVehicles[favouriteAmount - 1].stored == 3){
 					vehicleText3 = 'Stolen';
 				}
@@ -2203,7 +2203,7 @@ function showFavourites() {
 
 				<div class="card card-o d-flex flex-column">
 					<div class="card-header card-o-header text-center">
-						<span class="card-o-title">Favorite Vehicles</span>
+						<span class="card-o-title">Favorite Véhicules</span>
 					</div>
 					<div class="card-body card-o-body favorite_vehicles_card-body">
 						<div class="row h-100">
@@ -2270,14 +2270,14 @@ function openVehicles() {
 	`;
 
 	var sideBar = `
-		<p class="sidebar-item mt-2" id="overview_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Overview</span></p>
-		<p class="sidebar-item selected" id="vehicles_page"><i class="fa-solid fa-warehouse"></i> <span class="ms-1">Vehicles</span></p>
-		<p class="sidebar-item" id="share_page"><i class="fa-solid fa-users"></i> <span class="ms-1">Share</span></p>
+		<p class="sidebar-item mt-2" id="overview_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Résumé</span></p>
+		<p class="sidebar-item selected" id="vehicles_page"><i class="fa-solid fa-warehouse"></i> <span class="ms-1">Véhicules</span></p>
+		<p class="sidebar-item" id="share_page"><i class="fa-solid fa-users"></i> <span class="ms-1">Partager</span></p>
 	`;
 	if (noSharedTab) {
 		sideBar = `
-			<p class="sidebar-item mt-2" id="overview_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Overview</span></p>
-			<p class="sidebar-item selected" id="vehicles_page"><i class="fa-solid fa-warehouse"></i> <span class="ms-1">Vehicles</span></p>
+			<p class="sidebar-item mt-2" id="overview_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Résumé</span></p>
+			<p class="sidebar-item selected" id="vehicles_page"><i class="fa-solid fa-warehouse"></i> <span class="ms-1">Véhicules</span></p>
 		`;
 	}
 	$('#sidebar').html(sideBar);
@@ -2325,7 +2325,7 @@ function openVehicles() {
 			} else if (currentVehicleType[i].stored == 1) {
 				currentVehicleType[i].stored = "Stored"
 			} else if (currentVehicleType[i].stored == 2) {
-				currentVehicleType[i].stored = "Impounded"
+				currentVehicleType[i].stored = "Fourriere"
 			} else if (currentVehicleType[i].stored == 3) {
 				currentVehicleType[i].stored = "Stolen"
 			}
@@ -2359,8 +2359,8 @@ function openVehicles() {
 												<img src="${currentVehicleType[i].vehicleURL}" class="w-100">
 											</div>
 											<div class="d-flex mt-1">
-												<button type="button" class="btn btn-blue vehicles_btn me-1 w-50" id="select_vehicle" data-vehicle_plate="${currentVehicleType[i].plate}" data-vehicle_model="${currentVehicleType[i].vehicleModel}" data-vehicleurl="${currentVehicleType[i].vehicleURL}">Select</button>
-												<button type="button" class="btn btn-blue vehicles_btn ms-1 w-50" id="take_out" data-vehicle_plate="${currentVehicleType[i].plate}" data-vehicle_id="${currentVehicleType[i].vehicleModel}" data-vehicle_name="${currentVehicleType[i].vehiclename}" data-vehicle_type="${currentVehicleType[i].type}" data-vehicleurl="${currentVehicleType[i].vehicleURL}" ${buttonState}>Take Out</button>
+												<button type="button" class="btn btn-blue vehicles_btn me-1 w-50" id="select_vehicle" data-vehicle_plate="${currentVehicleType[i].plate}" data-vehicle_model="${currentVehicleType[i].vehicleModel}" data-vehicleurl="${currentVehicleType[i].vehicleURL}">Choisir</button>
+												<button type="button" class="btn btn-blue vehicles_btn ms-1 w-50" id="take_out" data-vehicle_plate="${currentVehicleType[i].plate}" data-vehicle_id="${currentVehicleType[i].vehicleModel}" data-vehicle_name="${currentVehicleType[i].vehiclename}" data-vehicle_type="${currentVehicleType[i].type}" data-vehicleurl="${currentVehicleType[i].vehicleURL}" ${buttonState}>Récupérer</button>
 											</div>
 										</div>
 									</div>
@@ -2388,9 +2388,9 @@ function openVehicles() {
 												<img src="${currentVehicleType[i].vehicleURL}" class="w-100">
 											</div>
 											<div class="d-flex mt-1">
-											<button type="button" class="btn btn-blue vehicles_btn me-1 w-50" id="select_vehicle" data-vehicle_plate="${currentVehicleType[i].plate}" data-vehicle_model="${currentVehicleType[i].vehicleModel}" data-vehicleurl="${currentVehicleType[i].vehicleURL}">Select</button>
+											<button type="button" class="btn btn-blue vehicles_btn me-1 w-50" id="select_vehicle" data-vehicle_plate="${currentVehicleType[i].plate}" data-vehicle_model="${currentVehicleType[i].vehicleModel}" data-vehicleurl="${currentVehicleType[i].vehicleURL}">Choisir</button>
 			
-												<button type="button" class="btn btn-blue vehicles_btn ms-1 w-50" id="take_out" data-vehicle_plate="${currentVehicleType[i].plate}" data-vehicle_id="${currentVehicleType[i].vehicleModel}" data-vehicle_name="${currentVehicleType[i].vehiclename}" data-vehicle_type="${currentVehicleType[i].type}" ${buttonState}>Take Out</button>
+												<button type="button" class="btn btn-blue vehicles_btn ms-1 w-50" id="take_out" data-vehicle_plate="${currentVehicleType[i].plate}" data-vehicle_id="${currentVehicleType[i].vehicleModel}" data-vehicle_name="${currentVehicleType[i].vehiclename}" data-vehicle_type="${currentVehicleType[i].type}" ${buttonState}>Récupérer</button>
 											</div>
 										</div>
 									</div>
@@ -2417,10 +2417,10 @@ function openVehicles() {
 												<img src="${currentVehicleType[i].vehicleURL}" class="w-100">
 											</div>
 											<div class="d-flex mt-1">
-											<button type="button" class="btn btn-blue vehicles_btn me-1 w-50" id="select_vehicle" data-vehicle_plate="${currentVehicleType[i].plate}" data-vehicle_model="${currentVehicleType[i].vehicleModel}" data-vehicleurl="${currentVehicleType[i].vehicleURL}">Select</button>
+											<button type="button" class="btn btn-blue vehicles_btn me-1 w-50" id="select_vehicle" data-vehicle_plate="${currentVehicleType[i].plate}" data-vehicle_model="${currentVehicleType[i].vehicleModel}" data-vehicleurl="${currentVehicleType[i].vehicleURL}">Choisir</button>
 												
 												
-												<button type="button" class="btn btn-blue vehicles_btn ms-1 w-50" id="take_out" data-vehicle_plate="${currentVehicleType[i].plate}" data-vehicle_id="${currentVehicleType[i].vehicleModel}" data-vehicle_name="${currentVehicleType[i].vehiclename}" data-vehicle_type="${currentVehicleType[i].type}" ${buttonState}>Take Out</button>
+												<button type="button" class="btn btn-blue vehicles_btn ms-1 w-50" id="take_out" data-vehicle_plate="${currentVehicleType[i].plate}" data-vehicle_id="${currentVehicleType[i].vehicleModel}" data-vehicle_name="${currentVehicleType[i].vehiclename}" data-vehicle_type="${currentVehicleType[i].type}" ${buttonState}>Récupérer</button>
 											</div>
 										</div>
 									</div>
@@ -2477,7 +2477,7 @@ function openVehicles() {
 
 			<div class="vehicles_window">
 				<div class="row">
-					<span class="card-o-title2 text-center grey-text"> No Vehicles Owned </span>
+					<span class="card-o-title2 text-center grey-text"> No Véhicules Owned </span>
 				</div> 
 			</div>`)
 	}
@@ -2489,9 +2489,9 @@ function openVehicles() {
 
 function openShare() {
 	$('#sidebar').html(`
-		<p class="sidebar-item mt-2" id="overview_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Overview</span></p>
-		<p class="sidebar-item" id="vehicles_page"><i class="fa-solid fa-warehouse"></i> <span class="ms-1">Vehicles</span></p>
-		<p class="sidebar-item selected" id="share_page"><i class="fa-solid fa-users"></i> <span class="ms-1">Share</span></p>
+		<p class="sidebar-item mt-2" id="overview_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Résumé</span></p>
+		<p class="sidebar-item" id="vehicles_page"><i class="fa-solid fa-warehouse"></i> <span class="ms-1">Véhicules</span></p>
+		<p class="sidebar-item selected" id="share_page"><i class="fa-solid fa-users"></i> <span class="ms-1">Partager</span></p>
 	`);
 
 	selectedWindow = "share";
@@ -2508,7 +2508,7 @@ $(document).on('click', "#shared", function() {
 			<div class="d-flex justify-content-center flex-column align-items-center">
 				<span class="load"></span>
 				<br>
-				<div class="loadingtxt">Loading Data...</div>
+				<div class="loadingtxt">Accès Garage...</div>
 			</div>
 		</div>
 	`);
@@ -2709,14 +2709,14 @@ $(document).on('click', "#shared2", function() {
 $(document).on('click', "#overview_page", function() {
 	if (selectedWindow != "overview") {
 		var sideBar = `
-			<p class="sidebar-item mt-2 selected" id="overview_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Overview</span></p>
-			<p class="sidebar-item" id="vehicles_page"><i class="fa-solid fa-warehouse"></i> <span class="ms-1">Vehicles</span></p>
-			<p class="sidebar-item" id="share_page"><i class="fa-solid fa-users"></i> <span class="ms-1">Share</span></p>
+			<p class="sidebar-item mt-2 selected" id="overview_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Résumé</span></p>
+			<p class="sidebar-item" id="vehicles_page"><i class="fa-solid fa-warehouse"></i> <span class="ms-1">Véhicules</span></p>
+			<p class="sidebar-item" id="share_page"><i class="fa-solid fa-users"></i> <span class="ms-1">Partager</span></p>
 		`;
 		if (noSharedTab) {
 			sideBar = `
-				<p class="sidebar-item mt-2 selected" id="overview_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Overview</span></p>
-				<p class="sidebar-item" id="vehicles_page"><i class="fa-solid fa-warehouse"></i> <span class="ms-1">Vehicles</span></p>
+				<p class="sidebar-item mt-2 selected" id="overview_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Résumé</span></p>
+				<p class="sidebar-item" id="vehicles_page"><i class="fa-solid fa-warehouse"></i> <span class="ms-1">Véhicules</span></p>
 			`;
 		}
 		$('#sidebar').html(sideBar);
@@ -2742,14 +2742,14 @@ $(document).on('click', "#vehicles_page", function() {
 		selectedWindow = "vehicles";
 		sharedVehiclesBeingShown = false
 		var sideBar = `
-			<p class="sidebar-item mt-2" id="overview_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Overview</span></p>
-			<p class="sidebar-item selected" id="vehicles_page"><i class="fa-solid fa-warehouse"></i> <span class="ms-1">Vehicles</span></p>
-			<p class="sidebar-item" id="share_page"><i class="fa-solid fa-users"></i> <span class="ms-1">Share</span></p>
+			<p class="sidebar-item mt-2" id="overview_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Résumé</span></p>
+			<p class="sidebar-item selected" id="vehicles_page"><i class="fa-solid fa-warehouse"></i> <span class="ms-1">Véhicules</span></p>
+			<p class="sidebar-item" id="share_page"><i class="fa-solid fa-users"></i> <span class="ms-1">Partager</span></p>
 		`;
 		if (noSharedTab) {
 			sideBar = `
-				<p class="sidebar-item mt-2" id="overview_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Overview</span></p>
-				<p class="sidebar-item selected" id="vehicles_page"><i class="fa-solid fa-warehouse"></i> <span class="ms-1">Vehicles</span></p>
+				<p class="sidebar-item mt-2" id="overview_page"><i class="bi bi-grid-1x2-fill"></i> <span class="ms-1">Résumé</span></p>
+				<p class="sidebar-item selected" id="vehicles_page"><i class="fa-solid fa-warehouse"></i> <span class="ms-1">Véhicules</span></p>
 			`;
 		}
 		$('#sidebar').html(sideBar);
@@ -2846,7 +2846,7 @@ $(document).on('click', "#shareModalID", function() {
 
 	$("#share_dropdown").empty();
 	var c = document.createElement("option");
-	c.text = "Select a vehicle";
+	c.text = "Séléctionner un Véhicule";
 	c.value = "select"
 	dropdown.options.add(c, 1);
 	for (var i = 0; i < vehicles.length; i++) {
@@ -2877,7 +2877,7 @@ $(document).on('click', "#sharevehicle", function() {
 
 	$("#share_dropdown").empty();
 	var c = document.createElement("option");
-	c.text = "Select a vehicle";
+	c.text = "Séléctionner un Véhicule";
 	c.value = "select"
 	dropdown.options.add(c, 1);
 	for (var i = 0; i < vehicles.length; i++) {
@@ -3023,7 +3023,7 @@ function setClosePlayers(resp) {
 	var dropdown = document.getElementById("hireEmployeeDropdown");
 	$("#hireEmployeeDropdown").empty();
 	var c = document.createElement("option");
-	c.text = "Select a person";
+	c.text = "Séléctionner une personne";
 	c.value = "select"
 	dropdown.options.add(c, 1);
 	for (var i = 0; i < closestPlayers.length; i++) {
@@ -3441,7 +3441,7 @@ function closeMenu() {
 	abortTimer();
 	if (selectedWindow != "" && selectedWindow != "leaveBusiness" && selectedWindow != "view_vehicle" && selectedWindow != "keysMenu" && selectedWindow != "purchaseCompany" && selectedWindow != "playerImpound" && selectedWindow != "sellGarage" && selectedWindow != "buyGarage" && selectedWindow != "createGarage" && selectedWindow != "recover_vehicle" && selectedWindow != "policeImpound" && selectedWindow != "liveries") {
 		$('.loading_menu').fadeIn();
-		$('.loadingtxt').html(`Logging Out...`);
+		$('.loadingtxt').html(`Déconnexion...`);
 		time = 300
 	}
 
@@ -3458,7 +3458,7 @@ function closeMenu() {
 			$(".impound_menu").fadeOut();
 			$('#impoundtime_dropdown').html(`<option value="select">Set the time</option>`);
 			if(!isImpoundGlobal){
-				$('#impoundlocation_dropdown').html(`<option value="select">Select an Impound</option>`);
+				$('#impoundlocation_dropdown').html(`<option value="select">Séléctionner une Fourrière</option>`);
 			}
 			
 			document.getElementById("impound_reason").value = ""
@@ -3512,7 +3512,7 @@ function closeMenu() {
 				action: "close",
 			}));
 			setTimeout(function() {
-				$('.loadingtxt').html(`Loading Data...`);
+				$('.loadingtxt').html(`Accès garage...`);
 			}, 700);
 		}, 300);
 	}, time);

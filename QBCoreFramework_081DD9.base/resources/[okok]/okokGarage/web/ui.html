@@ -19,7 +19,7 @@
 						<hr>
 						<span class="sidebar-title">Menu</span>
 						<div id="sidebar"></div>
-						<p class="sidebar-item mt-auto logout" id="log_out"><i class="fas fa-sign-out-alt"></i></i> <span class="ms-1">Logout</span></p>
+						<p class="sidebar-item mt-auto logout" id="log_out"><i class="fas fa-sign-out-alt"></i></i> <span class="ms-1">Déconnexion</span></p>
 					</div>
 					<div class="col-md-10 tab-s">
 						<div class="d-flex justify-content-between align-items-center" id="top_bar"></div>
@@ -38,18 +38,18 @@
 					<span class="close-button" id="closeImpoundMenu"><i class="fas fa-times"></i></span>
 					<div class="row h-100">
 						<div class="col-md-12 section">
-							<span class="text-center page-title">Impound</span>
+							<span class="text-center page-title">Fourière</span>
 							<hr class="mg060">
 
 							<input type="text" id="impound_reason" class="form-control impound-input" placeholder="Reason" onkeyup="checkIfEmpty()">
 							<select id="impoundlocation_dropdown" class="form-select form-select-lg f-s2 mt-3" onChange="checkIfEmpty()">
-									<option value="select">Select an Impound</option>
+									<option value="select">Choisir une fourrière</option>
 								</select>
 							<select id="impoundtime_dropdown" class="form-select form-select-lg f-s2 mt-3" onChange="checkIfEmpty()">
-									<option value="select2">Set the time</option>
+									<option value="select2">Régler l'heure</option>
 								</select>
 							<div class="d-flex justify-content-center mt-3">
-								<button type="button" class="btn btn-blue w-100 impound" id="impound" disabled>IMPOUND</button>
+								<button type="button" class="btn btn-blue w-100 impound" id="impound" disabled>FOURRIERE</button>
 							</div>
 						</div>
 					</div>
@@ -64,7 +64,7 @@
 				<span class="close-button" id="closeImpound2Menu"><i class="fas fa-times"></i></span>
 				<div class="row">
 					<div class="col-md-12 section" id="impound2_div">
-						<span class="selected-page sp-i2 text-center"><span id="page-title">Impounded Vehicles</span></span>
+						<span class="selected-page sp-i2 text-center"><span id="page-title">Véhicules en fourrière</span></span>
 						<hr class="mg050">
 						<div class="impound2_window mt-2" id="impounded_vehicles">
 							<div class="row" id="impounded_vehicles2">
@@ -83,7 +83,7 @@
 				<span class="close-button" id="closeTransferKeysMenu"><i class="fas fa-times"></i></span>
 				<div class="row h-100">
 					<div class="col-md-12 section">
-						<span class="text-center page-title">Transfer Keys</span>
+						<span class="text-center page-title">Transférer les clefs</span>
 						<hr class="mg060">
 						<div id="keyslist" class="d-flex flex-column"></div>
 					</div>
@@ -98,7 +98,7 @@
 				<span class="close-button" id="closeRecoverVehicleMenu"><i class="fas fa-times"></i></span>
 				<div class="row h-100">
 					<div class="col-md-12 section">
-						<span class="text-center page-title">Recover Vehicle</span>
+						<span class="text-center page-title">Retrouver le véhicule</span>
 						<hr class="mg060">
 						<div class="recovervehicle_window">
 							<div id="recovervehiclelist" class="d-flex flex-column"></div>
@@ -123,23 +123,23 @@
 				<span class="close-button" id="closeCreateGarageMenu" data-bs-dismiss="modal"><i class="fas fa-times"></i></span>
 				<div class="row h-100">
 					<div class="col-md-12 section">
-						<span class="text-center page-title">Create Garage</span>
+						<span class="text-center page-title">Créer garage</span>
 						<hr class="mg060">
-						<span class="text-center fs125">Garage Name</span>
+						<span class="text-center fs125">Nom du garage</span>
 						<input type="text" id="garage_name" class="form-control bc-292a31 text-center" placeholder="Private Garage 54" onkeyup="checkIfEmpty()">
 						<span class="mt-2 text-center fs125">Type</span>
 						<select id="garage_typedropdown" class="form-select form-select-lg bc-292a31 text-center" onChange="checkIfEmpty()">
-								<option value="select">Select a type</option>
-								<option value="car">Cars/Motorcycles</option>
-								<option value="air">Airplanes/Helicopters</option>
-								<option value="boat">Boats</option>
+								<option value="select">Choisir un type</option>
+								<option value="car">Voitures/Moto</option>
+								<option value="air">Avions/Hélicoptère</option>
+								<option value="boat">Bateau</option>
 							</select>
-						<span class="mt-2 text-center fs125">Price</span>
+						<span class="mt-2 text-center fs125">Prix</span>
 						<input type="number" id="garage_price" class="form-control bc-292a31 text-center" placeholder="20000" onkeyup="checkIfEmpty()">
-						<span class="mt-2 text-center fs125">Max Owners</span>
+						<span class="mt-2 text-center fs125">Nb. Propriétaire Max</span>
 						<input type="text" id="garage_maxowners" class="form-control bc-292a31 text-center" value="3" onkeyup="checkIfEmpty()">
 						<div class="d-flex justify-content-center mt-3">
-							<button type="button" id="garage_create" class="btn btn-blue w-100 ci-option" disabled>CREATE</button>
+							<button type="button" id="garage_create" class="btn btn-blue w-100 ci-option" disabled>CREER</button>
 						</div>
 					</div>
 				</div>
@@ -152,12 +152,12 @@
 		<div class="modal-dialog modal-dialog-centered w21">
 			<div class="modal-content">
 				<div class="modal-body text-center">
-					<span class="modal-t">Transfer Keys</span>
+					<span class="modal-t">Transférer les clés</span>
 					<hr class="mg070">
 					<span class="close-button" data-bs-dismiss="modal" id="closeTransferKeysModal"><i class="fas fa-times"></i></span>
 					<div class="d-flex justify-content-center flex-column mt-2">
 						<span id="transfer_keys_model">BMW M4 (LXS 146)</span>
-						<input type="number" id="transferKeys_player_id" class="form-control mt-3" placeholder="Player ID" onkeyup="checkIfEmpty()">
+						<input type="number" id="transferKeys_player_id" class="form-control mt-3" placeholder="ID Joueur" onkeyup="checkIfEmpty()">
 						<button type="button" id="transfer_keys" class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#transferKeysModal" disabled>Transfer</button>
 					</div>
 				</div>
@@ -165,22 +165,22 @@
 		</div>
 	</div>
 
-	<!-- Transfer Vehicle Modal -->
+	<!-- Transférerle véhicule Modal -->
 	<div class="modal fade" id="transferVehicleModal">
 		<div class="modal-dialog modal-dialog-centered w21">
 			<div class="modal-content">
 				<div class="modal-body text-center">
-					<span class="modal-t">Transfer Vehicle</span>
+					<span class="modal-t">Transférer le véhicule</span>
 					<hr class="mg070">
 					<span class="close-button" data-bs-dismiss="modal" id="closeTransferVehicleModal"><i class="fas fa-times"></i></span>
 					<div class="d-flex justify-content-center flex-column mt-2">
 						<span id="transfer_vehicle_model">BMW M4 (LXS 146)</span>
 						<div class="d-flex" id="transfer_vehicle_options">
-							<button type="button" id="transfer_to_player" class="btn btn-blue w-50 me-2 ci-option">PLAYER</button>
-							<button type="button" id="transfer_to_society" class="btn btn-odark w-50 ms-2 ci-option">SOCIETY</button>
+							<button type="button" id="transfer_to_player" class="btn btn-blue w-50 me-2 ci-option">JOUEUR</button>
+							<button type="button" id="transfer_to_society" class="btn btn-odark w-50 ms-2 ci-option">SOCIETE</button>
 						</div>
-						<input type="number" id="transferVehicle_player_id" class="form-control mt-3" placeholder="Player ID" onkeyup="checkIfEmpty()">
-						<button type="button" id="transfer_vehicle" class="btn btn-blue" ddata-bs-toggle="modal" data-bs-target="#tranferVehicleModal" disabled>Transfer</button>
+						<input type="number" id="transferVehicle_player_id" class="form-control mt-3" placeholder="ID Joueur" onkeyup="checkIfEmpty()">
+						<button type="button" id="transfer_vehicle" class="btn btn-blue" ddata-bs-toggle="modal" data-bs-target="#tranferVehicleModal" disabled>Transférer</button>
 					</div>
 				</div>
 			</div>
@@ -192,17 +192,17 @@
 		<div class="modal-dialog modal-dialog-centered w21">
 			<div class="modal-content">
 				<div class="modal-body text-center p-07151515">
-					<span class="modal-t">Share</span>
+					<span class="modal-t">Partager</span>
 					<hr class="mg070">
 					<span class="close-button-modal" data-bs-dismiss="modal" id="closeShareModal"><i class="fas fa-times"></i></span>
 					<div class="d-flex justify-content-center flex-column mt-2">
 						<div class="d-flex">
-							<button type="button" id="sharevehicle" class="btn btn-blue w-50 me-2 ci-option">VEHICLE</button>
+							<button type="button" id="sharevehicle" class="btn btn-blue w-50 me-2 ci-option">VEHICULE</button>
 							<button type="button" id="sharegarage" class="btn btn-odark w-50 ms-2 ci-option">GARAGE</button>
 						</div>
 						<select id="share_dropdown" class="form-select form-select-lg mt-3" onChange="checkIfEmpty()"></select>
-						<input type="number" id="share_player_id" class="form-control mt-3" placeholder="Player ID" onkeyup="checkIfEmpty()">
-						<button type="button" id="shareButton" class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#shareModal" disabled>Share</button>
+						<input type="number" id="share_player_id" class="form-control mt-3" placeholder="ID Joueur" onkeyup="checkIfEmpty()">
+						<button type="button" id="shareButton" class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#shareModal" disabled>Partager</button>
 					</div>
 				</div>
 			</div>
@@ -214,14 +214,14 @@
 		<div class="modal-dialog modal-dialog-centered w21">
 			<div class="modal-content">
 				<div class="modal-body text-center p-07151515">
-					<span class="modal-t">Hire Employee</span>
+					<span class="modal-t">Embaucher</span>
 					<hr class="mg070">
 					<span class="close-button-modal" data-bs-dismiss="modal" id="closeHireEmployeeModal"><i class="fas fa-times"></i></span>
 					<div class="d-flex justify-content-center flex-column mt-3">
 						<select id="hireEmployeeDropdown" class="form-select form-select-lg" onChange="checkIfEmpty()">
-							<option value="select">Select a person</option>		 
+							<option value="select">Choisir une personne</option>		 
 						</select>
-						<button type="button" id="hire_employee" class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#hireEmployeeModal" disabled>Hire</button>
+						<button type="button" id="hire_employee" class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#hireEmployeeModal" disabled>Embaucher</button>
 					</div>
 				</div>
 			</div>
@@ -233,19 +233,19 @@
 		<div class="modal-dialog modal-dialog-centered w21">
 			<div class="modal-content">
 				<div class="modal-body text-center p-07151515">
-					<span class="modal-t">Edit Employee</span>
+					<span class="modal-t">Editer les employés</span>
 					<hr class="mg070">
 					<span class="close-button-modal" data-bs-dismiss="modal" id="closeEditEmployeeModal"><i class="fas fa-times"></i></span>
 					<div class="d-flex justify-content-center flex-column">
-						<span class="text-center fs125 fw600">Name</span>
+						<span class="text-center fs125 fw600">Nom</span>
 						<input type="text" id="employee_name" class="form-control text-center" value="" onkeyup="checkIfEmpty()" readonly>
-						<span class="fs125 fw600 mt-2">Total Earned</span>
+						<span class="fs125 fw600 mt-2">Total gagné</span>
 						<input type="number" id="employee_total-earned" class="form-control text-center" value="" onkeyup="checkIfEmpty()" readonly>
-						<span class="fs125 fw600 mt-2">Grade</span>
+						<span class="fs125 fw600 mt-2">Rang</span>
 						<select id="rank_dropdown" class="form-select form-select-lg" onChange="checkIfEmpty()">
 						</select>
-						<div class="femployee" id="fire_employee_btn" data-bs-toggle="modal" data-bs-target="#fireEmployeeModal" data-bs-dismiss="modal"><i class="fas fa-trash"></i> Fire Employee</div>
-						<button type="button" id="edit_employee" class="btn btn-blue" data-bs-dismiss="modal" disabled>Save</button>
+						<div class="femployee" id="fire_employee_btn" data-bs-toggle="modal" data-bs-target="#fireEmployeeModal" data-bs-dismiss="modal"><i class="fas fa-trash"></i> Licensier Employé</div>
+						<button type="button" id="edit_employee" class="btn btn-blue" data-bs-dismiss="modal" disabled>Sauvegarder</button>
 					</div>
 				</div>
 			</div>
@@ -257,12 +257,12 @@
 		<div class="modal-dialog modal-lg modal-dialog-centered w21">
 			<div class="modal-content">
 				<div class="modal-body text-center">
-					<span class="modal-t">Fire Employee</span>
+					<span class="modal-t">Licensier Employé</span>
 					<hr class="mg070">
 					<span class="close-button" data-bs-dismiss="modal" id="closeFireEmployeeModal"><i class="fas fa-times"></i></span>
 					<div class="conf_fire text-center" id="fireText" value=""></div>
 					<div class="d-flex justify-content-center align-items-center mt-625">
-						<span id="cancel_fire" class="btn btn-dark w-50 modal-buttons me-3" data-bs-dismiss="modal">Cancel</span>
+						<span id="cancel_fire" class="btn btn-dark w-50 modal-buttons me-3" data-bs-dismiss="modal">Annuler</span>
 						<span id="fire_employee" class="btn btn-blue w-50 modal-buttons">Fire</span>
 					</div>
 				</div>
@@ -282,12 +282,12 @@
 		<div class="modal-dialog modal-lg modal-dialog-centered w21">
 			<div class="modal-content">
 				<div class="modal-body text-center p-07151515">
-					<span class="modal-t">Deposit Money</span>
+					<span class="modal-t">Déposer de l'argent</span>
 					<hr class="mg070">
 					<span class="close-button-modal" data-bs-dismiss="modal" id="closeDepositModal"><i class="fas fa-times"></i></span>
 					<div class="d-flex justify-content-center flex-column mt-3">
 						<input type="number" id="deposit_money" class="form-control text-center" placeholder="Amount" onkeyup="checkIfEmpty()">
-						<button type="button" id="deposit" class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#depositModal" disabled>Deposit</button>
+						<button type="button" id="deposit" class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#depositModal" disabled>Déposer</button>
 					</div>
 				</div>
 			</div>
@@ -299,12 +299,12 @@
 		<div class="modal-dialog modal-lg modal-dialog-centered w21">
 			<div class="modal-content">
 				<div class="modal-body text-center p-07151515">
-					<span class="modal-t">Withdraw Money</span>
+					<span class="modal-t">Retirer de l'argent</span>
 					<hr class="mg070">
 					<span class="close-button-modal" data-bs-dismiss="modal" id="closeWithdrawModal"><i class="fas fa-times"></i></span>
 					<div class="d-flex justify-content-center flex-column mt-3">
 						<input type="number" id="withdraw_money" class="form-control text-center" placeholder="Amount" onkeyup="checkIfEmpty()">
-						<button type="button" id="withdraw" class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#withdrawModal" disabled>Withdraw</button>
+						<button type="button" id="withdraw" class="btn btn-blue" data-bs-toggle="modal" data-bs-target="#withdrawModal" disabled>Retirer</button>
 					</div>
 				</div>
 			</div>
@@ -315,13 +315,13 @@
 		<div class="modal-dialog modal-lg modal-dialog-centered w21">
 			<div class="modal-content">
 				<div class="modal-body text-center">
-					<span class="modal-t">Retrieve Vehicle</span>
+					<span class="modal-t">Rretrouver le véhicule</span>
 					<hr class="mg070">
 					<span class="close-button" data-bs-dismiss="modal" id="closePayModal"><i class="fas fa-times"></i></span>
 					<div class="conf_fire text-center" id="pay_modal_message"></div>
 					<div class="d-flex justify-content-center align-items-center mt-625">
-						<span id="cancel_buybusiness" class="btn btn-dark w-50 modal-buttons me-3" data-bs-dismiss="modal">Cancel</span>
-						<span id="pay_button_modal" class="btn btn-blue w-50 modal-buttons" data-bs-dismiss="modal">Confirm</span>
+						<span id="cancel_buybusiness" class="btn btn-dark w-50 modal-buttons me-3" data-bs-dismiss="modal">Annuler</span>
+						<span id="pay_button_modal" class="btn btn-blue w-50 modal-buttons" data-bs-dismiss="modal">Confirmer</span>
 					</div>
 				</div>
 			</div>
@@ -332,13 +332,13 @@
 		<div class="modal-dialog modal-lg modal-dialog-centered w21">
 			<div class="modal-content">
 				<div class="modal-body text-center">
-					<span class="modal-t">Transfer Vehicle</span>
+					<span class="modal-t">Transférerle véhicule</span>
 					<hr class="mg070">
 					<span class="close-button" data-bs-dismiss="modal" id="closeTransferModal"><i class="fas fa-times"></i></span>
-					<div class="conf_fire text-center">Do you want to transfer this vehicle?</div>
+					<div class="conf_fire text-center">Voulez vous transférer le véhicule ?</div>
 					<div class="d-flex justify-content-center align-items-center mt-625">
-						<span id="transfer_vehicle_cancel" class="btn btn-dark w-50 modal-buttons me-3" data-bs-dismiss="modal">Cancel</span>
-						<span id="transfer_vehicle_confirm" class="btn btn-blue w-50 modal-buttons" data-bs-dismiss="modal">Confirm</span>
+						<span id="transfer_vehicle_cancel" class="btn btn-dark w-50 modal-buttons me-3" data-bs-dismiss="modal">Annuler</span>
+						<span id="transfer_vehicle_confirm" class="btn btn-blue w-50 modal-buttons" data-bs-dismiss="modal">Confirmer</span>
 					</div>
 				</div>
 			</div>
@@ -349,13 +349,13 @@
 		<div class="modal-dialog modal-lg modal-dialog-centered w21">
 			<div class="modal-content">
 				<div class="modal-body text-center">
-					<span class="modal-t">Are you sure?</span>
+					<span class="modal-t">Confirmer ?</span>
 					<hr class="mg070">
 					<span class="close-button" data-bs-dismiss="modal" id="closeModal"><i class="fas fa-times"></i></span>
-					<div class="conf_fire text-center" id="sellbusiness_message">Do you want to sell the business for <span id="business_sell_price"></span>€?</div>
+					<div class="conf_fire text-center" id="sellbusiness_message">Vendre le buisness pour <span id="business_sell_price"></span>€?</div>
 					<div class="d-flex justify-content-center align-items-center mt-625">
-						<span id="cancel_buybusiness" class="btn btn-dark w-50 modal-buttons me-3" data-bs-dismiss="modal">Cancel</span>
-						<span id="sellbusiness_button_modal" class="btn btn-blue w-50 modal-buttons" data-bs-dismiss="modal">Sell</span>
+						<span id="cancel_buybusiness" class="btn btn-dark w-50 modal-buttons me-3" data-bs-dismiss="modal">Annuler</span>
+						<span id="sellbusiness_button_modal" class="btn btn-blue w-50 modal-buttons" data-bs-dismiss="modal">Vendre</span>
 					</div>
 				</div>
 			</div>
@@ -366,13 +366,13 @@
 		<div class="modal-dialog modal-lg modal-dialog-centered w21">
 			<div class="modal-content">
 				<div class="modal-body text-center">
-					<span class="modal-t">Are you sure?</span>
+					<span class="modal-t">Confirmer ?</span>
 					<hr class="mg070">
 					<span class="close-button" data-bs-dismiss="modal" id="closeLeaveModal"><i class="fas fa-times"></i></span>
-					<div class="conf_fire text-center" id="leavebusiness_message">Do you want to leave the business?</div>
+					<div class="conf_fire text-center" id="leavebusiness_message">Abandonner le buisness ?</div>
 					<div class="d-flex justify-content-center align-items-center mt-625">
-						<span id="cancel_leavebusiness" class="btn btn-dark w-50 modal-buttons me-3" data-bs-dismiss="modal">Cancel</span>
-						<span id="leavebusiness_button_modal" class="btn btn-blue w-50 modal-buttons" data-bs-dismiss="modal">Leave</span>
+						<span id="cancel_leavebusiness" class="btn btn-dark w-50 modal-buttons me-3" data-bs-dismiss="modal">Annuler</span>
+						<span id="leavebusiness_button_modal" class="btn btn-blue w-50 modal-buttons" data-bs-dismiss="modal">Abandonner</span>
 					</div>
 				</div>
 			</div>
@@ -384,13 +384,13 @@
 			<div class="modal-dialog modal-lg modal-dialog-centered w21">
 				<div class="modal-content">
 					<div class="modal-body text-center">
-						<span class="modal-t">Buy Business</span>
+						<span class="modal-t">Acheter le buisness</span>
 						<hr class="mg070">
 						<span class="close-button" data-bs-dismiss="modal" id="closeBuyBusinessModal"><i class="fas fa-times"></i></span>
 						<div class="conf_fire text-center" id="purchaseMessage">Do you want to buy a garage company for 10,000€?</div>
 						<div class="d-flex justify-content-center align-items-center mt-625">
-							<span id="cancel_buybusiness" class="btn btn-dark w-50 modal-buttons me-3" data-bs-dismiss="modal">Cancel</span>
-							<span id="buy_business" class="btn btn-blue w-50 modal-buttons" data-bs-dismiss="modal">Buy</span>
+							<span id="cancel_buybusiness" class="btn btn-dark w-50 modal-buttons me-3" data-bs-dismiss="modal">Annuler</span>
+							<span id="buy_business" class="btn btn-blue w-50 modal-buttons" data-bs-dismiss="modal">Acheter</span>
 						</div>
 					</div>
 				</div>
@@ -403,13 +403,13 @@
 			<div class="modal-dialog modal-lg modal-dialog-centered w21">
 				<div class="modal-content">
 					<div class="modal-body text-center">
-						<span class="modal-t">Repair Vehicle</span>
+						<span class="modal-t">Réparer le véhicule</span>
 						<hr class="mg070">
 						<span class="close-button" data-bs-dismiss="modal" id="closeRepairModal"><i class="fas fa-times"></i></span>
-						<div class="conf_fire text-center" id="purchaseMessage">Do you want to repair this vehicle for <span id="repair_price"></span>€?</div>
+						<div class="conf_fire text-center" id="purchaseMessage">Réparer le véhicule pour <span id="repair_price"></span>€?</div>
 						<div class="d-flex justify-content-center align-items-center mt-625">
-							<span id="cancel_repair" class="btn btn-dark w-50 modal-buttons me-3" data-bs-dismiss="modal">Cancel</span>
-							<span id="repair_button" class="btn btn-blue w-50 modal-buttons" data-bs-dismiss="modal">Repair</span>
+							<span id="cancel_repair" class="btn btn-dark w-50 modal-buttons me-3" data-bs-dismiss="modal">Annuler</span>
+							<span id="repair_button" class="btn btn-blue w-50 modal-buttons" data-bs-dismiss="modal">Réparer</span>
 						</div>
 					</div>
 				</div>
@@ -428,11 +428,11 @@
 		<div class="modal-dialog modal-dialog-centered w21">
 			<div class="modal-content">
 				<div class="modal-body text-center p-07151515">
-					<span class="modal-t">Edit Garage</span>
+					<span class="modal-t">Modifier le garage</span>
 					<hr class="mg070">
 					<span class="close-button-modal" data-bs-dismiss="modal" id="closeEditGarageModal"><i class="fas fa-times"></i></span>
 					<div class="d-flex justify-content-center flex-column">
-						<span class="text-center fs125 fw600">Name</span>
+						<span class="text-center fs125 fw600">Nom</span>
 						<input type="text" id="editgarage_name" class="form-control text-center" value="Private Garage 22" onkeyup="checkIfEmpty()">
 						<span class="fs125 fw600 mt-2">Type</span>
 						<select id="editGarageType" class="form-select form-select-lg text-center" onChange="checkIfEmpty()">
@@ -488,7 +488,7 @@
 					<div class="d-flex justify-content-center flex-column align-items-center">
 						<span class="load"></span>
 						<br>
-						<div class="loadingtxt">Loading Data...</div>
+						<div class="loadingtxt">Accès Garage...</div>
 					</div>
 				</div>
 			</div>
@@ -531,7 +531,7 @@
 
 		<div class="vehicle_stats vehicle_stats_data">
 			<div>
-				<div class="vehicle_stats_title">MAX SPEED</div>
+				<div class="vehicle_stats_title">VITESSE MAX</div>
 				<div class="progress">
 					<div class="progress-value-speed"></div>
 				</div>
@@ -543,13 +543,13 @@
 				</div>
 			</div>
 			<div>
-				<div class="vehicle_stats_title">BRAKING</div>
+				<div class="vehicle_stats_title">FREIN</div>
 				<div class="progress">
 					<div class="progress-value-braking"></div>
 				</div>
 			</div>
 			<div>
-				<div class="vehicle_stats_title">HANDLING</div>
+				<div class="vehicle_stats_title">MANEUVRE</div>
 				<div class="progress-last">
 					<div class="progress-value-handling"></div>
 				</div>
@@ -558,7 +558,7 @@
 
 		<div class="vehicle_stats vehicle_stats_tuning">
 			<div>
-				<div class="vehicle_stats_title">ENGINE</div>
+				<div class="vehicle_stats_title">MOTEUR</div>
 				<div class="progress">
 					<div class="progress-value-engine"></div>
 				</div>
@@ -576,13 +576,13 @@
 				</div>
 			</div>
 			<div>
-				<div class="vehicle_stats_title">BRAKES</div>
+				<div class="vehicle_stats_title">FREIN</div>
 				<div class="progress">
 					<div class="progress-value-brakesMod"></div>
 				</div>
 			</div>
 			<div>
-				<div class="vehicle_stats_title">ARMOR</div>
+				<div class="vehicle_stats_title">BLINDAGE</div>
 				<div class="progress">
 					<div class="progress-value-armor"></div>
 				</div>
