@@ -353,7 +353,7 @@ function openViewMenu(selectedPlate){
 	if(allowRepair){
 		$('#takeout-repair-buttons').html(`
 			<button type="button" id="takeout-button-view" class="btn btn-blue btn-veh_actions w-50 me-2">Récupérer</button>
-			<button type="button" id="takeout-button-repair" class="btn btn-odark3 btn-veh_actions w-50 ms-2" data-bs-toggle="modal" data-bs-target="#repairModal">REPAIR</button>
+			<button type="button" id="takeout-button-repair" class="btn btn-odark3 btn-veh_actions w-50 ms-2" data-bs-toggle="modal" data-bs-target="#repairModal">REPARER</button>
 		`);
 		$('#repair_price').html(repairPrice);
 	} else {
@@ -1802,7 +1802,7 @@ function openOverview() {
 									<button type="button" class="btn btn-blue veh_selected_btn w-50 ms-1" id="take_out" data-vehicle_plate="${vehicle[0].plate}" data-vehicle_id="${vehicle[0].vehicleModel}" data-vehicle_name="${vehicle[0].vehiclename}" data-vehicle_type="${vehicle[0].type}" data-vehicleurl="${vehicle[0].vehicleURL}">Récupérer</button>
 								</div>
 								<div class="d-flex mt-2">
-									<button type="button" id="transferKeys" class="btn btn-blue veh_selected_btn w-50 me-1" data-bs-toggle="modal" data-bs-target="#transferKeysModal">Transfer Keys</button>
+									<button type="button" id="transferKeys" class="btn btn-blue veh_selected_btn w-50 me-1" data-bs-toggle="modal" data-bs-target="#transferKeysModal">Transférer les clefs</button>
 									<button type="button" id="transferVehicle" class="btn btn-blue veh_selected_btn w-50 ms-1" data-bs-toggle="modal" data-bs-target="#transferVehicleModal">Transférer Véhicule</button>
 								</div>
 							</div>
@@ -2691,7 +2691,7 @@ $(document).on('click', "#shared2", function() {
 			<div class="d-flex justify-content-center flex-column align-items-center">
 				<span class="load"></span>
 				<br>
-				<div class="loadingtxt">Loading Data...</div>
+				<div class="loadingtxt">Accès Garage...</div>
 			</div>
 		</div>
 	`);
@@ -2726,7 +2726,7 @@ $(document).on('click', "#overview_page", function() {
 				<div class="d-flex justify-content-center flex-column align-items-center">
 					<span class="load"></span>
 					<br>
-					<div class="loadingtxt">Loading Data...</div>
+					<div class="loadingtxt">Accès Garage...</div>
 				</div>
 			</div>
 		`);
@@ -2761,7 +2761,7 @@ $(document).on('click', "#vehicles_page", function() {
 				<div class="d-flex justify-content-center flex-column align-items-center">
 					<span class="load"></span>
 					<br>
-					<div class="loadingtxt">Loading Data...</div>
+					<div class="loadingtxt">Accès Garage...</div>
 				</div>
 			</div>
 		`);
@@ -2803,7 +2803,7 @@ $(document).on('click', "#share_page", function() {
 				<div class="d-flex justify-content-center flex-column align-items-center">
 					<span class="load"></span>
 					<br>
-					<div class="loadingtxt">Loading Data...</div>
+					<div class="loadingtxt">Accès Garage...</div>
 				</div>
 			</div>
 		`);
@@ -3166,7 +3166,7 @@ $(document).on('click', "#admingarages_page", function() {
 				<div class="d-flex justify-content-center flex-column align-items-center">
 					<span class="load"></span>
 					<br>
-					<div class="loadingtxt">Loading Data...</div>
+					<div class="loadingtxt">Accès Garage...</div>
 				</div>
 			</div>
 		`);
@@ -3186,7 +3186,7 @@ $(document).on('click', "#adminbusinesses_page", function() {
 				<div class="d-flex justify-content-center flex-column align-items-center">
 					<span class="load"></span>
 					<br>
-					<div class="loadingtxt">Loading Data...</div>
+					<div class="loadingtxt">Accès Garage...</div>
 				</div>
 			</div>
 		`);
@@ -3373,7 +3373,7 @@ $(document).on('click', "#employees_page", function() {
 			<div class="d-flex justify-content-center flex-column align-items-center">
 				<span class="load"></span>
 				<br>
-				<div class="loadingtxt">Loading Data...</div>
+				<div class="loadingtxt">Accès Garage...</div>
 			</div>
 		</div>
 	`);
@@ -3386,7 +3386,7 @@ $(document).on('click', "#saleshistory_page", function() {
 			<div class="d-flex justify-content-center flex-column align-items-center">
 				<span class="load"></span>
 				<br>
-				<div class="loadingtxt">Loading Data...</div>
+				<div class="loadingtxt">Accès Garage...</div>
 			</div>
 		</div>
 	`);
@@ -3407,7 +3407,7 @@ $(document).on('click', "#overviewc_page", function() {
 			<div class="d-flex justify-content-center flex-column align-items-center">
 				<span class="load"></span>
 				<br>
-				<div class="loadingtxt">Loading Data...</div>
+				<div class="loadingtxt">Accès Garage...</div>
 			</div>
 		</div>
 	`);
