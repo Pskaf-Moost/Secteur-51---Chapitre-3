@@ -911,6 +911,9 @@ const InventoryContainer = Vue.createApp({
                     this.closeInventory();
                 }
             } else if (key === "Tab") {
+                if (this.isInventoryOpen) {
+                    this.closeInventory();
+                }
                 event.preventDefault();
             }
         });
