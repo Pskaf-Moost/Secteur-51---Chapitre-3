@@ -145,7 +145,7 @@ Config.ViewCameraAngle = -60
 Config.ViewCameraDistance = 5.5
 Config.ViewCameraHeight = 2.0
 
-Config.AllowRepair = true -- If a player can repair the vehicle when viewing the vehicle
+Config.AllowRepair = false -- If a player can repair the vehicle when viewing the vehicle
 Config.RepairPrice = 1000
 
 Config.TakeOutAtView = true -- When taking the vehicle out via the view menu it'll spawn in the same location as the view vehicle
