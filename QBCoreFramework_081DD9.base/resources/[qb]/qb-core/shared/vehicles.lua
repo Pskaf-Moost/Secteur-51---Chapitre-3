@@ -4,15 +4,24 @@ QBShared.Vehicles = QBShared.Vehicles or {}
 local Vehicles = {
     --- Compacts (0)
     --- 
-    {
-        model = 'Explorer',        -- This has to match the spawn code of the vehicle
-        name = 'Explorer',         -- This is the display of the vehicle
-        brand = 'Ford',     -- This is the vehicle's brand
-        price = 4000,          -- The price that the vehicle sells for
-        category = 'suvs', -- Catgegory of the vehilce, stick with GetVehicleClass() options https://docs.fivem.net/natives/?_0x29439776AAA00A62
-        type = 'automobile',   -- Vehicle type, refer here https://docs.fivem.net/natives/?_0x6AE51D4B & here https://docs.fivem.net/natives/?_0xA273060E
-        shop = 'pdm',          -- Can be a single shop or multiple shops. For multiple shops for example {'shopname1','shopname2','shopname3'}
-    },
+    { model = 'lspd10char',          name = 'lspd10char',                        brand = 'FORD',           price = 13000,   category = 'suvs',       type = 'automobile', shop = 'pdm' },
+    { model = 'lspd14char',          name = 'lspd14char',                        brand = 'FORD',           price = 13000,   category = 'suvs',       type = 'automobile', shop = 'pdm' },
+    { model = 'lspd18char',          name = 'lspd18char',                        brand = 'FORD',           price = 13000,   category = 'suvs',       type = 'automobile', shop = 'pdm' },
+    { model = 'lspd16exp',          name = 'lspd16exp',                        brand = 'FORD',           price = 13000,   category = 'suvs',       type = 'automobile', shop = 'pdm' },
+    { model = 'lspd16expk9',          name = 'lspd16expk9',                        brand = 'FORD',           price = 13000,   category = 'suvs',       type = 'automobile', shop = 'pdm' },
+    { model = 'lspd20exp',          name = 'lspd20exp',                        brand = 'FORD',           price = 13000,   category = 'suvs',       type = 'automobile', shop = 'pdm' },
+    { model = 'lspd18tahoe',          name = 'lspd18tahoe',                        brand = 'FORD',           price = 13000,   category = 'suvs',       type = 'automobile', shop = 'pdm' },
+    { model = 'lspd18tahoek9',          name = 'lspd18tahoek9',                        brand = 'FORD',           price = 13000,   category = 'suvs',       type = 'automobile', shop = 'pdm' },
+    { model = 'lspd21f150',          name = 'lspd21f150',                        brand = 'FORD',           price = 13000,   category = 'suvs',       type = 'automobile', shop = 'pdm' },
+    { model = 'lspddur',          name = 'lspddur',                        brand = 'FORD',           price = 13000,   category = 'suvs',       type = 'automobile', shop = 'pdm' },
+    { model = 'lspdtaur',          name = 'lspdtaur',                        brand = 'FORD',           price = 13000,   category = 'suvs',       type = 'automobile', shop = 'pdm' },
+    { model = 'policeb',          name = 'policeb',                        brand = 'FORD',           price = 13000,   category = 'suvs',       type = 'automobile', shop = 'pdm' },
+    { model = 'lspdcap',          name = 'lspdcap',                        brand = 'FORD',           price = 13000,   category = 'suvs',       type = 'automobile', shop = 'pdm' },
+    { model = 'lspdram',          name = 'lspdram',                        brand = 'FORD',           price = 13000,   category = 'suvs',       type = 'automobile', shop = 'pdm' },
+    { model = 'lspdvet',          name = 'lspdvet',                        brand = 'FORD',           price = 13000,   category = 'suvs',       type = 'automobile', shop = 'pdm' },
+    { model = 'lspdvic',          name = 'lspdvic',                        brand = 'FORD',           price = 13000,   category = 'suvs',       type = 'automobile', shop = 'pdm' },
+    { model = 'lspd15exp',          name = 'lspd15exp',                        brand = 'FORD',           price = 13000,   category = 'suvs',       type = 'automobile', shop = 'pdm' },
+    
     {
         model = 'asbo',        -- This has to match the spawn code of the vehicle
         name = 'Asbo',         -- This is the display of the vehicle
