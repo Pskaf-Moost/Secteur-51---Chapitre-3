@@ -400,7 +400,7 @@ Config.VehicleExtras = {
 
 Config.VehicleSeats = {
     id = 'vehicleseats',
-    title = 'Vehicle Seats',
+    title = 'Sièges',
     icon = 'chair',
     items = {}
 }
