@@ -178,26 +178,28 @@ Config.HireEmployeeRadius = 15.0
 Config.SellBusinessReceivePercentage = 50 -- How much a player will receive for selling his business (in percentage, 50 = 50%)
 
 Config.Companies = {
-	["Garage Shop"]	= {
-		coords = vec3(112.28, -630.06, 44.23),
-		ownerCoords = vec3(112.28, -630.06, 44.23),
-		radius = 1,
-		price = 12000,
-		ownerBlip = {blipId = 475, blipColor = 38, blipScale = 0.9, blipText = "Owner Panel"},
-		unownedOwnerBlip = {blipId = 476, blipColor = 2, blipScale = 0.9, blipText = "Unowned Company"},
-		ownerMarker = {id = 21, color = {r = 31, g = 94, b = 255, a = 90}, size = {x = 0.5, y = 0.5, z = 0.5}, bobUpAndDown = 0, faceCamera = 0, rotate = 1, drawOnEnts = 0, textureDict = 0, textureName = 0 },
-		UnownedMarker = {id = 21, color = {r = 0, g = 255, b = 0, a = 90}, size = {x = 0.5, y = 0.5, z = 0.5}, bobUpAndDown = 0, faceCamera = 0, rotate = 1, drawOnEnts = 0, textureDict = 0, textureName = 0 },
-	},--[[
-	["Garage Shop 2"]	= {
-		coords = vector3(-949.5,-2946.55,13.95),
-		ownerCoords = vector3(-949.5,-2946.55,13.95),
-		radius = 1,
-		price = 12000,
-		ownerBlip = {blipId = 475, blipColor = 38, blipScale = 0.9, blipText = "Owner Panel"},
-		unownedOwnerBlip = {blipId = 476, blipColor = 2, blipScale = 0.9, blipText = "Unowned Company"},
-		ownerMarker = {id = 21, color = {r = 31, g = 94, b = 255, a = 90}, size = {x = 0.5, y = 0.5, z = 0.5}, bobUpAndDown = 0, faceCamera = 0, rotate = 1, drawOnEnts = 0, textureDict = 0, textureName = 0 },
-		UnownedMarker = {id = 21, color = {r = 0, g = 255, b = 0, a = 90}, size = {x = 0.5, y = 0.5, z = 0.5}, bobUpAndDown = 0, faceCamera = 0, rotate = 1, drawOnEnts = 0, textureDict = 0, textureName = 0 },
-	},]]
+	-- ["Garage Shop"]	= {
+	-- 	coords = vec3(112.28, -630.06, 44.23),
+	-- 	ownerCoords = vec3(112.28, -630.06, 44.23),
+	-- 	radius = 1,
+	-- 	price = 12000,
+	-- 	ownerBlip = {blipId = 475, blipColor = 38, blipScale = 0.9, blipText = "Owner Panel"},
+	-- 	unownedOwnerBlip = {blipId = 476, blipColor = 2, blipScale = 0.9, blipText = "Unowned Company"},
+	-- 	ownerMarker = {id = 21, color = {r = 31, g = 94, b = 255, a = 90}, size = {x = 0.5, y = 0.5, z = 0.5}, bobUpAndDown = 0, faceCamera = 0, rotate = 1, drawOnEnts = 0, textureDict = 0, textureName = 0 },
+	-- 	UnownedMarker = {id = 21, color = {r = 0, g = 255, b = 0, a = 90}, size = {x = 0.5, y = 0.5, z = 0.5}, bobUpAndDown = 0, faceCamera = 0, rotate = 1, drawOnEnts = 0, textureDict = 0, textureName = 0 },
+	-- },
+	
+	-- ["Garage Shop 2"]	= {
+	-- 	coords = vector3(-949.5,-2946.55,13.95),
+	-- 	ownerCoords = vector3(-949.5,-2946.55,13.95),
+	-- 	radius = 1,
+	-- 	price = 12000,
+	-- 	ownerBlip = {blipId = 475, blipColor = 38, blipScale = 0.9, blipText = "Owner Panel"},
+	-- 	unownedOwnerBlip = {blipId = 476, blipColor = 2, blipScale = 0.9, blipText = "Unowned Company"},
+	-- 	ownerMarker = {id = 21, color = {r = 31, g = 94, b = 255, a = 90}, size = {x = 0.5, y = 0.5, z = 0.5}, bobUpAndDown = 0, faceCamera = 0, rotate = 1, drawOnEnts = 0, textureDict = 0, textureName = 0 },
+	-- 	UnownedMarker = {id = 21, color = {r = 0, g = 255, b = 0, a = 90}, size = {x = 0.5, y = 0.5, z = 0.5}, bobUpAndDown = 0, faceCamera = 0, rotate = 1, drawOnEnts = 0, textureDict = 0, textureName = 0 },
+	-- },
+	
 }
 
 Config.SocietyVehiclesList = {
