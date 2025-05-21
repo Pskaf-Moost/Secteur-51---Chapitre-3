@@ -58,7 +58,7 @@ PublicSharedEmoteConfig = {
     IdleAnimation = {
         enable = true,                    -- 🛌 Enable idle animations when standing still
         defaultidleanimationid = "idle2", -- 💤 Default idle animation to play
-        idleTimeout = 5000,              -- ⏳ Time (in ms) before idle animation starts
+        idleTimeout = 30000,              -- ⏳ Time (in ms) before idle animation starts
         idleTick = 1000,                  -- ⏲️ How often (in ms) the idle animation is checked
         usingInitializeExport = false     -- 📦 Use Initialize export (for external control)
         -- exports("BlockIdleAnimation", function() ... )
